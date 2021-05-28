@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "oeis"
 version = "0.1.0"
-description = ""
+description = "OEIS Integer sequences implemented in Python"
 authors = ["Reid Hochstedler <reidhoch@gmail.com>"]
 
 [tool.poetry.dependencies]
