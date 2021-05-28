@@ -1,13 +1,12 @@
 # coding=utf-8
-from typing import Generator
+from typing import Iterable
 
 
-def fib(n: int) -> Generator[int, None, None]:
+def fibonacci() -> Iterable[int]:
     yield 0  # special case
-    if n > 0:
-        yield 1  # special case
-    a: int = 0  # initially set to fib(0)
-    b: int = 1  # initially set to fib(1)
-    for _ in range(1, n):
-        a, b = b, a + b
-        yield b  # main generation step
+    yield 1  # special case
+    prev: int = 0  # fib(0)
+    curr: int = 1  # fib(1)
+    while True:
+        prev, curr = curr, prev + curr
+        yield curr

@@ -1,8 +1,9 @@
 # coding=utf-8
-from typing import Generator
 from math import floor, log2
+from typing import Iterable
+from itertools import count
 
 
-def polite(n: int) -> Generator[int, None, None]:
-    for i in range(2, n):
+def polite() -> Iterable[int]:
+    for i in count(start=2):
         yield i + floor(log2(i + log2(i)))

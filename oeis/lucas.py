@@ -1,13 +1,12 @@
 # coding=utf-8
-from typing import Generator
+from typing import Iterable
 
 
-def lucas(n: int) -> Generator[int, None, None]:
+def lucas() -> Iterable[int]:
     yield 2  # special case
-    if n > 0:
-        yield 1  # special case
-    a: int = 2  # initially set to lucas(0)
-    b: int = 1  # initially set to lucas(1)
-    for _ in range(1, n):
-        a, b = b, a + b
-        yield b  # main generation step
+    yield 1  # special case
+    prev: int = 2  # initially set to lucas(0)
+    curr: int = 1  # initially set to lucas(1)
+    while True:
+        prev, curr = curr, prev + curr
+        yield curr

@@ -1,10 +1,10 @@
 # coding=utf-8
-from typing import Generator
+from typing import Iterable
+from itertools import count
 
 
-def lazy_caterer(n: int) -> Generator[int, None, None]:
+def lazy_caterer() -> Iterable[int]:
     yield 1  # special case
-    if n > 0:
-        yield 2  # special case
-    for i in range(2, n):
+    yield 2  # special case
+    for i in count(start=2):
         yield ((i * i) + i + 2) // 2

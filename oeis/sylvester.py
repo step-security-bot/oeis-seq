@@ -1,10 +1,9 @@
 # coding=utf-8
-from typing import Generator
+from typing import Iterable
 
 
-def sylvester(n: int) -> Generator[int, None, None]:
-    yield 2  # sylvester(0)
-    s = [2]
-    for i in range(1, n):
-        s.append(s[i - 1] * (s[i - 1] - 1) + 1)
-        yield s[-1]
+def sylvester() -> Iterable[int]:
+    prev: int = 2  # sylvester(0)
+    while True:
+        yield prev
+        prev = (prev * (prev - 1)) + 1

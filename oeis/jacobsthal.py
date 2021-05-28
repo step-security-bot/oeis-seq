@@ -1,13 +1,12 @@
 # coding=utf-8
-from typing import Generator
+from typing import Iterable
 
 
-def jacobsthal(n: int) -> Generator[int, None, None]:
+def jacobsthal() -> Iterable[int]:
     yield 0  # special case
-    if n > 0:
-        yield 1  # special case
-    a: int = 0  # initially set to jacobsthal(0)
-    b: int = 1  # initially set to jacobsthal(1)
-    for _ in range(1, n):
-        a, b = b, b + 2 * a
-        yield b  # main generation step
+    yield 1  # special case
+    prev: int = 0  # initially set to jacobsthal(0)
+    curr: int = 1  # initially set to jacobsthal(1)
+    while True:
+        prev, curr = curr, curr + 2 * prev
+        yield curr
