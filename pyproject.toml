@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "oeis"
+name = "oeis-seq"
 version = "0.1.0"
 description = "OEIS Integer sequences implemented in Python"
 authors = ["Reid Hochstedler <reidhoch@gmail.com>"]
