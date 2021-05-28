@@ -2,7 +2,12 @@
 name = "oeis-seq"
 version = "0.1.0"
 description = "OEIS Integer sequences implemented in Python"
+license = "MIT"
 authors = ["Reid Hochstedler <reidhoch@gmail.com>"]
+packages = [
+    { include = "oeis" }
+]
+
 
 [tool.poetry.dependencies]
 python = "^3.8"
