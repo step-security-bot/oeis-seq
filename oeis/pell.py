@@ -1,7 +1,9 @@
 # coding=utf-8
 from typing import Iterable
+from oeis.registry import registry
 
 
+@registry.register("A000129")
 def pell() -> Iterable[int]:
     yield 0  # pell(0)
     yield 1  # pell(1)
