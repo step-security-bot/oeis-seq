@@ -1,7 +1,9 @@
 # coding=utf-8
 from typing import Iterable
+from oeis.registry import registry
 
 
+@registry.register("A001608")
 def perrin() -> Iterable[int]:
     yield 3  # perrin(0)
     yield 0  # perrin(1)

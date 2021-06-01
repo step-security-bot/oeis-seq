@@ -1,7 +1,9 @@
 # coding=utf-8
 from typing import Iterable
+from .registry import registry
 
 
+@registry.register("A000073")
 def tribonacci() -> Iterable[int]:
     yield 0
     yield 0

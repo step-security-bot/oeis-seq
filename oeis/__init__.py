@@ -26,14 +26,14 @@ from .polygonal import (
     square,
     triangular,
 )
-from .pyramidal import pyramidal, square_pyramidal, triangular_pyramidal
+from .pyramidal import square_pyramidal, triangular_pyramidal
 from .recaman import recaman
 from .sylvester import sylvester
 from .totient import totient
 from .tribonacci import tribonacci
 from .woodall import woodall
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = [
     "catalan",
     "centered_polygonal",

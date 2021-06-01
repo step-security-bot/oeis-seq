@@ -1,5 +1,6 @@
 # coding=utf-8
 from typing import Iterable
+from oeis.registry import registry
 
 
 def polygonal(k: int) -> Iterable[int]:
@@ -11,10 +12,12 @@ def polygonal(k: int) -> Iterable[int]:
         prev, curr = prev + curr + k, curr + k
 
 
+@registry.register("A001477")
 def natural() -> Iterable[int]:
     return polygonal(0)
 
 
+@registry.register("A000217")
 def triangular() -> Iterable[int]:
     return polygonal(1)
 
@@ -27,6 +30,7 @@ def pentagonal() -> Iterable[int]:
     return polygonal(3)
 
 
+@registry.register("A000384")
 def hexagonal() -> Iterable[int]:
     return polygonal(4)
 
