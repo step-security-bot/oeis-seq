@@ -1,7 +1,9 @@
 # coding=utf-8
 from typing import Iterable
+from oeis.registry import registry
 
 
+@registry.register(identifier="A000142")
 def fibonacci() -> Iterable[int]:
     yield 0  # special case
     yield 1  # special case
