@@ -3,6 +3,7 @@ from itertools import islice
 from typing import List
 
 from oeis import (
+    buttered_croissant,
     catalan,
     centered_triangular,
     centered_square,
@@ -31,6 +32,12 @@ from oeis import (
     vauban,
     woodall,
 )
+
+def test_buttered_croissant() -> None:
+    expected: List[int] = [1, 3, 7, 19, 55, 163, 487, 1459, 4375, 13123]
+    actual: List[int] = list(islice(buttered_croissant(), 10))
+    assert actual == expected
+
 
 
 def test_catalan() -> None:
