@@ -1,3 +1,4 @@
+# coding=utf-8
 from typing import Callable, Dict, Iterable, TypeVar, Generic
 
 T = TypeVar("T", bound=Callable[[], Iterable[int]])

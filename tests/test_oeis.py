@@ -13,6 +13,7 @@ from oeis import (
     jacobsthal,
     lazy_caterer,
     leonardo,
+    loeschian,
     lucas,
     natural,
     padovan,
@@ -27,6 +28,7 @@ from oeis import (
     triangular,
     triangular_pyramidal,
     tribonacci,
+    vauban,
     woodall,
 )
 
@@ -94,6 +96,12 @@ def test_lazy_caterer() -> None:
 def test_leonardo() -> None:
     expected: List[int] = [1, 1, 3, 5, 9, 15, 25, 41, 67, 109]
     actual: List[int] = list(islice(leonardo(), 10))
+    assert actual == expected
+
+
+def test_loeschian() -> None:
+    expected: List[int] = [0, 1, 3, 4, 7, 9, 12, 13, 16, 19]
+    actual: List[int] = list(islice(loeschian(), 10))
     assert actual == expected
 
 
@@ -182,6 +190,12 @@ def test_triangular_pyramidal() -> None:
 def test_tribonacci() -> None:
     expected: List[int] = [0, 0, 1, 1, 2, 4, 7, 13, 24, 44]
     actual: List[int] = list(islice(tribonacci(), 10))
+    assert actual == expected
+
+
+def test_vauban() -> None:
+    expected: List[int] = [0, 1, 3, 15, 69, 321, 1491, 6921, 32139, 149229]
+    actual: List[int] = list(islice(vauban(), 10))
     assert actual == expected
 
 
