@@ -1,8 +1,7 @@
 # coding=utf-8
 from .buttered_croissant import buttered_croissant
 from .catalan import catalan
-from .centered_polygonal import (centered_polygonal, centered_square,
-                                 centered_triangular)
+from .centered_polygonal import centered_polygonal, centered_square, centered_triangular
 from .eratosthenes import eratosthenes
 from .factorial import factorial
 from .fibonacci import fibonacci
@@ -15,9 +14,20 @@ from .padovan import padovan
 from .pell import pell
 from .perrin import perrin
 from .polite import polite
-from .polygonal import (decagonal, dodecagonal, hendecagonal, heptagonal,
-                        hexagonal, natural, nonagonal, octagonal, pentagonal,
-                        polygonal, square, triangular)
+from .polygonal import (
+    decagonal,
+    dodecagonal,
+    hendecagonal,
+    heptagonal,
+    hexagonal,
+    natural,
+    nonagonal,
+    octagonal,
+    pentagonal,
+    polygonal,
+    square,
+    triangular,
+)
 from .pyramidal import square_pyramidal, triangular_pyramidal
 from .recaman import recaman
 from .sylvester import sylvester
