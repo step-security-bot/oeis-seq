@@ -1,8 +1,10 @@
 # coding=utf-8
-from typing import Iterable, List
-from .utils import coprime
 from itertools import count
+from typing import Iterable, List
+
 from oeis.registry import registry
+
+from .utils import coprime
 
 
 @registry.register("A000010")
