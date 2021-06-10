@@ -14,7 +14,7 @@ __all__ = [
 
 
 def aliquot_sum(n: int) -> int:
-    """Return the aliquot sum of n - s(n)"""
+    """Return the aliquot sum of n - s(n)."""
     return sum(proper_divisors(n))
 
 
