@@ -1,6 +1,7 @@
 # coding=utf-8
-from typing import Iterable
 from itertools import count
+from typing import Iterable
+
 from oeis.registry import registry
 
 

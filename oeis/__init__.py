@@ -12,6 +12,7 @@ from .loeschian import loeschian
 from .lucas import lucas
 from .padovan import padovan
 from .pell import pell
+from .perfect import perfect
 from .perrin import perrin
 from .polite import polite
 from .polygonal import (
@@ -36,7 +37,7 @@ from .tribonacci import tribonacci
 from .vauban import vauban
 from .woodall import woodall
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 __all__ = [
     "buttered_croissant",
     "catalan",
@@ -62,6 +63,7 @@ __all__ = [
     "padovan",
     "pell",
     "pentagonal",
+    "perfect",
     "perrin",
     "polite",
     "polygonal",

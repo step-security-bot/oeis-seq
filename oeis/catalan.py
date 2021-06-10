@@ -1,7 +1,8 @@
 # coding=utf-8
-from math import comb
 from itertools import count
+from math import comb
 from typing import Iterable
+
 from oeis.registry import registry
 
 

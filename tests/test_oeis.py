@@ -1,12 +1,13 @@
 # coding=utf-8
+# flake8: noqa
 from itertools import islice
 from typing import List
 
 from oeis import (
     buttered_croissant,
     catalan,
-    centered_triangular,
     centered_square,
+    centered_triangular,
     eratosthenes,
     factorial,
     fibonacci,
@@ -19,12 +20,13 @@ from oeis import (
     natural,
     padovan,
     pell,
+    perfect,
     perrin,
     polite,
     polygonal,
     recaman,
-    sylvester,
     square_pyramidal,
+    sylvester,
     totient,
     triangular,
     triangular_pyramidal,
@@ -133,6 +135,12 @@ def test_padovan() -> None:
 def test_pell() -> None:
     expected: List[int] = [0, 1, 2, 5, 12, 29, 70, 169, 408, 985]
     actual: List[int] = list(islice(pell(), 10))
+    assert actual == expected
+
+
+def test_perfect() -> None:
+    expected: List[int] = [6, 28, 496, 8128]
+    actual: List[int] = list(islice(perfect(), 4))
     assert actual == expected
 
 

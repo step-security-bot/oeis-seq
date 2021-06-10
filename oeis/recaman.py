@@ -1,5 +1,6 @@
 # coding=utf-8
 from typing import Iterable, List
+
 from oeis.registry import registry
 
 

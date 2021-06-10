@@ -1,7 +1,8 @@
 # coding=utf-8
+from itertools import count
 from math import floor, log2
 from typing import Iterable
-from itertools import count
+
 from oeis.registry import registry
 
 

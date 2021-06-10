@@ -1,7 +1,8 @@
 # coding=utf-8
-from typing import Iterable
-from math import sqrt
 from itertools import count
+from math import sqrt
+from typing import Iterable
+
 from oeis.registry import registry
 
 
@@ -19,6 +20,6 @@ def loeschian() -> Iterable[int]:
                     return True
         return False
 
-    for n in count(start=0):
-        if is_loeschian(n):
-            yield n
+    for i in count(start=0):
+        if is_loeschian(i):
+            yield i
