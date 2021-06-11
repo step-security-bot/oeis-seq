@@ -22,7 +22,7 @@ flake8-import-order = "^0.18"
 flake8-pytest-style = "^1.4"
 hypothesis = "^6.8"
 matplotlib = "^3.4"
-mypy = "^0.901"
+mypy = "^0.902"
 pytest = "^6.2"
 pytest-cov = "^2.11"
 
