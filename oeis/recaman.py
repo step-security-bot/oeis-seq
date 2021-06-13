@@ -6,6 +6,7 @@ from oeis.registry import registry
 
 @registry.register("A005132")
 def recaman() -> Iterable[int]:
+    """Recamán's sequence."""
     yield 0  # recaman(0)
     seq: List[int] = [0]
     i: int = 1

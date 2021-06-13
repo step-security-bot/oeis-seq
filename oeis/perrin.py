@@ -6,6 +6,7 @@ from oeis.registry import registry
 
 @registry.register("A001608")
 def perrin() -> Iterable[int]:
+    """Perrin sequence (or Ondrej Such sequence)."""
     yield 3  # perrin(0)
     yield 0  # perrin(1)
     yield 2  # perrin(2)

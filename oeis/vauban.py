@@ -6,6 +6,7 @@ from oeis.registry import registry
 
 @registry.register("A224749")
 def vauban() -> Iterable[int]:
+    """Vauban's sequence."""
     yield 0
     yield 1
     n5: int = 0  # vauban(0)

@@ -1,5 +1,5 @@
 # coding=utf-8
-
+"""Various utility functions."""
 from functools import lru_cache
 from math import gcd, isqrt
 from typing import List, Set

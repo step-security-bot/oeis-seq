@@ -6,6 +6,7 @@ from oeis.registry import registry
 
 @registry.register("A001595")
 def leonardo() -> Iterable[int]:
+    """Leonardo numbers."""
     yield 1  # leonardo(0)
     yield 1  # leonardo(1)
     prev: int = 1

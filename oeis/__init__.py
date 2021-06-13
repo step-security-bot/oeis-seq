@@ -1,4 +1,5 @@
 # coding=utf-8
+"""OEIS Sequences."""
 from .buttered_croissant import buttered_croissant
 from .catalan import catalan
 from .centered_polygonal import centered_polygonal, centered_square, centered_triangular

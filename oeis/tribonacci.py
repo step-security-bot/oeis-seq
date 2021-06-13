@@ -6,6 +6,7 @@ from .registry import registry
 
 @registry.register("A000073")
 def tribonacci() -> Iterable[int]:
+    """Tribonacci numbers."""
     yield 0
     yield 0
     yield 1
