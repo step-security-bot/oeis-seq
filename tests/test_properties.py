@@ -1,9 +1,11 @@
 # coding=utf-8
+# flake8: noqa
 from itertools import islice
 from typing import List
 
 from hypothesis import given
 from hypothesis.strategies import integers
+
 from oeis import recaman
 
 

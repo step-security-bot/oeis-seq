@@ -1,15 +1,16 @@
 # coding=utf-8
-from typing import Iterable
-from math import sqrt
 from itertools import count
+from math import sqrt
+from typing import Iterable
+
 from oeis.registry import registry
 
 
 @registry.register("A003136")
 def loeschian() -> Iterable[int]:
+    """Loeschian numbers."""
+
     def is_loeschian(n: int) -> bool:
-        if n in [0, 1, 3]:
-            return True
         if n % 3 == 2:
             return False
         M: int = 2 * round(sqrt(n / 3))
@@ -19,6 +20,9 @@ def loeschian() -> Iterable[int]:
                     return True
         return False
 
-    for n in count(start=0):
-        if is_loeschian(n):
-            yield n
+    yield 0
+    yield 1
+    yield 3
+    for i in count(start=4):
+        if is_loeschian(i):
+            yield i

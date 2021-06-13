@@ -1,10 +1,12 @@
 # coding=utf-8
 from typing import Iterable
+
 from oeis.registry import registry
 
 
 @registry.register("A000931")
 def padovan() -> Iterable[int]:
+    """Padovan sequence (or Padovan numbers)."""
     yield 1  # padovan(0)
     yield 1  # padovan(1)
     yield 1  # padovan(2)
