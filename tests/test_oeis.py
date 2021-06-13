@@ -4,10 +4,12 @@ from itertools import islice
 from typing import List
 
 from oeis import (
+    abundant,
     buttered_croissant,
     catalan,
     centered_square,
     centered_triangular,
+    deficient,
     eratosthenes,
     factorial,
     fibonacci,
@@ -35,6 +37,10 @@ from oeis import (
     woodall,
 )
 
+def test_abundant() -> None:
+    expected: List[int] = [12, 18, 20, 24, 30, 36, 40, 42, 48, 54]
+    actual: List[int] = list(islice(abundant(), 10))
+    assert actual == expected
 
 def test_buttered_croissant() -> None:
     expected: List[int] = [1, 3, 7, 19, 55, 163, 487, 1459, 4375, 13123]
@@ -57,6 +63,12 @@ def test_centered_triangular() -> None:
 def test_centered_square() -> None:
     expected: List[int] = [1, 5, 13, 25, 41, 61, 85, 113, 145, 181]
     actual: List[int] = list(islice(centered_square(), 10))
+    assert actual == expected
+
+
+def test_deficient() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
+    actual: List[int] = list(islice(deficient(), 10))
     assert actual == expected
 
 

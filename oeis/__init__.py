@@ -1,8 +1,10 @@
 # coding=utf-8
 """OEIS Sequences."""
+from .abundant import abundant
 from .buttered_croissant import buttered_croissant
 from .catalan import catalan
 from .centered_polygonal import centered_polygonal, centered_square, centered_triangular
+from .deficient import deficient
 from .eratosthenes import eratosthenes
 from .factorial import factorial
 from .fibonacci import fibonacci
@@ -38,14 +40,16 @@ from .tribonacci import tribonacci
 from .vauban import vauban
 from .woodall import woodall
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 __all__ = [
+    "abundant",
     "buttered_croissant",
     "catalan",
     "centered_polygonal",
     "centered_square",
     "centered_triangular",
     "decagonal",
+    "deficient",
     "dodecagonal",
     "eratosthenes",
     "factorial",
