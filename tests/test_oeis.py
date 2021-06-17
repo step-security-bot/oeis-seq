@@ -9,6 +9,7 @@ from oeis import (
     catalan,
     centered_square,
     centered_triangular,
+    composite,
     deficient,
     eratosthenes,
     factorial,
@@ -27,6 +28,7 @@ from oeis import (
     polite,
     polygonal,
     recaman,
+    semiperfect,
     square_pyramidal,
     sylvester,
     totient,
@@ -37,10 +39,12 @@ from oeis import (
     woodall,
 )
 
+
 def test_abundant() -> None:
     expected: List[int] = [12, 18, 20, 24, 30, 36, 40, 42, 48, 54]
     actual: List[int] = list(islice(abundant(), 10))
     assert actual == expected
+
 
 def test_buttered_croissant() -> None:
     expected: List[int] = [1, 3, 7, 19, 55, 163, 487, 1459, 4375, 13123]
@@ -63,6 +67,12 @@ def test_centered_triangular() -> None:
 def test_centered_square() -> None:
     expected: List[int] = [1, 5, 13, 25, 41, 61, 85, 113, 145, 181]
     actual: List[int] = list(islice(centered_square(), 10))
+    assert actual == expected
+
+
+def test_composite() -> None:
+    expected: List[int] = [4, 6, 8, 9, 10, 12, 14, 15, 16, 18]
+    actual: List[int] = list(islice(composite(), 10))
     assert actual == expected
 
 
@@ -171,6 +181,12 @@ def test_polite() -> None:
 def test_recaman() -> None:
     expected: List[int] = [0, 1, 3, 6, 2, 7, 13, 20, 12, 21]
     actual: List[int] = list(islice(recaman(), 10))
+    assert actual == expected
+
+
+def test_semiperfect() -> None:
+    expected: List[int] = [6, 12, 18, 20, 24, 28, 30, 36, 40, 42]
+    actual: List[int] = list(islice(semiperfect(), 10))
     assert actual == expected
 
 

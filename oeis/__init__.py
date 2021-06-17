@@ -4,6 +4,7 @@ from .abundant import abundant
 from .buttered_croissant import buttered_croissant
 from .catalan import catalan
 from .centered_polygonal import centered_polygonal, centered_square, centered_triangular
+from .composite import composite
 from .deficient import deficient
 from .eratosthenes import eratosthenes
 from .factorial import factorial
@@ -34,6 +35,7 @@ from .polygonal import (
 )
 from .pyramidal import square_pyramidal, triangular_pyramidal
 from .recaman import recaman
+from .semiperfect import semiperfect
 from .sylvester import sylvester
 from .totient import totient
 from .tribonacci import tribonacci
@@ -48,6 +50,7 @@ __all__ = [
     "centered_polygonal",
     "centered_square",
     "centered_triangular",
+    "composite",
     "decagonal",
     "deficient",
     "dodecagonal",
@@ -73,6 +76,7 @@ __all__ = [
     "polite",
     "polygonal",
     "recaman",
+    "semiperfect",
     "square",
     "sylvester",
     "square_pyramidal",

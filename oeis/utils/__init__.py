@@ -2,6 +2,7 @@
 """Various utility functions."""
 from functools import lru_cache
 from math import gcd, isqrt
+from random import randrange
 from typing import List, Set
 
 __all__ = [
@@ -32,6 +33,41 @@ def divisors(n: int) -> List[int]:
             ret.add(i)
             ret.add(n // i)
     return sorted(ret)
+
+
+def _is_composite(a: int, d: int, n: int, s: int) -> bool:
+    if pow(a, d, n) == 1:
+        return False
+    for i in range(s):
+        if pow(a, 2 ** i * d, n) == n - 1:
+            return False
+    return True
+
+
+def is_prime(n: int, k: int = 8) -> bool:
+    """
+    Miller-Rabin primality test.
+
+    Args:
+            n: Number to test.
+            k: Optional number of rounds, default 8.
+    """
+    if n in [0, 1, 4, 6, 8, 9]:
+        return False
+    if n in [2, 3, 5, 7]:
+        return True
+    s: int = 0
+    d: int = n - 1
+    while d % 2 == 0:
+        d >>= 1
+        s += 1
+
+    for _ in range(k):
+        a = randrange(2, n)
+        if _is_composite(a, d, n, s):
+            return False
+
+    return True
 
 
 @lru_cache
