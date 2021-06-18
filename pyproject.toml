@@ -1,13 +1,11 @@
 [tool.poetry]
-name = "oeis-seq"
-version = "0.1.4"
+authors = ["Reid Hochstedler <reidhoch@gmail.com>"]
 description = "OEIS Integer sequences implemented in Python"
 license = "MIT"
-authors = ["Reid Hochstedler <reidhoch@gmail.com>"]
-packages = [
-    { include = "oeis" }
-]
-
+name = "oeis-seq"
+packages = [{ include = "oeis" }]
+repository = "https://github.com/reidhoch/oeis-seq"
+version = "0.1.4"
 
 [tool.poetry.dependencies]
 python = "^3.8"
