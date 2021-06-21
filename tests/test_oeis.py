@@ -1,6 +1,7 @@
 # coding=utf-8
 # flake8: noqa
 from itertools import islice
+from oeis.superperfect import superperfect
 from typing import List
 
 from oeis import (
@@ -36,6 +37,7 @@ from oeis import (
     triangular_pyramidal,
     tribonacci,
     vauban,
+    weird,
     woodall,
 )
 
@@ -190,6 +192,12 @@ def test_semiperfect() -> None:
     assert actual == expected
 
 
+def test_superperfect() -> None:
+    expected: List[int] = [2, 4, 16, 64, 4096, 65536, 262144]
+    actual: List[int] = list(islice(superperfect(), 7))
+    assert actual == expected
+
+
 def test_sylvester() -> None:
     expected: List[int] = [
         2,
@@ -239,6 +247,12 @@ def test_tribonacci() -> None:
 def test_vauban() -> None:
     expected: List[int] = [0, 1, 3, 15, 69, 321, 1491, 6921, 32139, 149229]
     actual: List[int] = list(islice(vauban(), 10))
+    assert actual == expected
+
+
+def test_weird() -> None:
+    expected: List[int] = [70, 836, 4030, 5830, 7192, 7912, 9272, 10430, 10570, 10792]
+    actual: List[int] = list(islice(weird(), 10))
     assert actual == expected
 
 

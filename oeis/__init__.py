@@ -36,10 +36,12 @@ from .polygonal import (
 from .pyramidal import square_pyramidal, triangular_pyramidal
 from .recaman import recaman
 from .semiperfect import semiperfect
+from .superperfect import superperfect
 from .sylvester import sylvester
 from .totient import totient
 from .tribonacci import tribonacci
 from .vauban import vauban
+from .weird import weird
 from .woodall import woodall
 
 __version__ = "0.1.4"
@@ -80,10 +82,12 @@ __all__ = [
     "square",
     "sylvester",
     "square_pyramidal",
+    "superperfect",
     "totient",
     "triangular",
     "triangular_pyramidal",
     "tribonacci",
     "vauban",
+    "weird",
     "woodall",
 ]
