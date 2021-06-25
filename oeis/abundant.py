@@ -3,12 +3,12 @@ from itertools import count
 from typing import Iterable
 
 from oeis.registry import registry
-from oeis.utils import is_perfect
+from oeis.utils import is_abundant
 
 
-@registry.register("A000396")
-def perfect() -> Iterable[int]:
-    """Perfect numbers."""
+@registry.register("A005101")
+def abundant() -> Iterable[int]:
+    """Abundant numbers."""
     for n in count(start=1):
-        if is_perfect(n):
+        if is_abundant(n):
             yield n

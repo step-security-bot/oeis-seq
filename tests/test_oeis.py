@@ -1,13 +1,17 @@
 # coding=utf-8
 # flake8: noqa
 from itertools import islice
+from oeis.superperfect import superperfect
 from typing import List
 
 from oeis import (
+    abundant,
     buttered_croissant,
     catalan,
     centered_square,
     centered_triangular,
+    composite,
+    deficient,
     eratosthenes,
     factorial,
     fibonacci,
@@ -18,6 +22,7 @@ from oeis import (
     loeschian,
     lucas,
     natural,
+    oblong,
     padovan,
     pell,
     perfect,
@@ -25,6 +30,7 @@ from oeis import (
     polite,
     polygonal,
     recaman,
+    semiperfect,
     square_pyramidal,
     sylvester,
     totient,
@@ -32,8 +38,15 @@ from oeis import (
     triangular_pyramidal,
     tribonacci,
     vauban,
+    weird,
     woodall,
 )
+
+
+def test_abundant() -> None:
+    expected: List[int] = [12, 18, 20, 24, 30, 36, 40, 42, 48, 54]
+    actual: List[int] = list(islice(abundant(), 10))
+    assert actual == expected
 
 
 def test_buttered_croissant() -> None:
@@ -57,6 +70,18 @@ def test_centered_triangular() -> None:
 def test_centered_square() -> None:
     expected: List[int] = [1, 5, 13, 25, 41, 61, 85, 113, 145, 181]
     actual: List[int] = list(islice(centered_square(), 10))
+    assert actual == expected
+
+
+def test_composite() -> None:
+    expected: List[int] = [4, 6, 8, 9, 10, 12, 14, 15, 16, 18]
+    actual: List[int] = list(islice(composite(), 10))
+    assert actual == expected
+
+
+def test_deficient() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
+    actual: List[int] = list(islice(deficient(), 10))
     assert actual == expected
 
 
@@ -126,6 +151,12 @@ def test_natural() -> None:
     assert actual == expected
 
 
+def test_oblong() -> None:
+    expected: List[int] = [0, 2, 6, 12, 20, 30, 42, 56, 72, 90]
+    actual: List[int] = list(islice(oblong(), 10))
+    assert actual == expected
+
+
 def test_padovan() -> None:
     expected: List[int] = [1, 1, 1, 2, 2, 3, 4, 5, 7, 9]
     actual: List[int] = list(islice(padovan(), 10))
@@ -159,6 +190,18 @@ def test_polite() -> None:
 def test_recaman() -> None:
     expected: List[int] = [0, 1, 3, 6, 2, 7, 13, 20, 12, 21]
     actual: List[int] = list(islice(recaman(), 10))
+    assert actual == expected
+
+
+def test_semiperfect() -> None:
+    expected: List[int] = [6, 12, 18, 20, 24, 28, 30, 36, 40, 42]
+    actual: List[int] = list(islice(semiperfect(), 10))
+    assert actual == expected
+
+
+def test_superperfect() -> None:
+    expected: List[int] = [2, 4, 16, 64, 4096, 65536, 262144]
+    actual: List[int] = list(islice(superperfect(), 7))
     assert actual == expected
 
 
@@ -211,6 +254,12 @@ def test_tribonacci() -> None:
 def test_vauban() -> None:
     expected: List[int] = [0, 1, 3, 15, 69, 321, 1491, 6921, 32139, 149229]
     actual: List[int] = list(islice(vauban(), 10))
+    assert actual == expected
+
+
+def test_weird() -> None:
+    expected: List[int] = [70, 836, 4030, 5830, 7192, 7912, 9272, 10430, 10570, 10792]
+    actual: List[int] = list(islice(weird(), 10))
     assert actual == expected
 
 

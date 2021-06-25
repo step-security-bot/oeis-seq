@@ -1,13 +1,11 @@
 [tool.poetry]
-name = "oeis-seq"
-version = "0.1.3"
+authors = ["Reid Hochstedler <reidhoch@gmail.com>"]
 description = "OEIS Integer sequences implemented in Python"
 license = "MIT"
-authors = ["Reid Hochstedler <reidhoch@gmail.com>"]
-packages = [
-    { include = "oeis" }
-]
-
+name = "oeis-seq"
+packages = [{ include = "oeis" }]
+repository = "https://github.com/reidhoch/oeis-seq"
+version = "0.1.4"
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -19,12 +17,13 @@ flake8-bugbear = "^21.4"
 flake8-commas = "^2.0"
 flake8-docstrings = "^1.6"
 flake8-import-order = "^0.18"
-flake8-pytest-style = "^1.4"
+flake8-pytest-style = "^1.5"
 hypothesis = "^6.8"
 matplotlib = "^3.4"
-mypy = "^0.902"
+mypy = "^0.910"
 pytest = "^6.2"
 pytest-cov = "^2.11"
+pytest-profiling = "^1.7"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
