@@ -22,6 +22,7 @@ from oeis import (
     loeschian,
     lucas,
     natural,
+    oblong,
     padovan,
     pell,
     perfect,
@@ -147,6 +148,12 @@ def test_lucas() -> None:
 def test_natural() -> None:
     expected: List[int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     actual: List[int] = list(islice(natural(), 10))
+    assert actual == expected
+
+
+def test_oblong() -> None:
+    expected: List[int] = [0, 2, 6, 12, 20, 30, 42, 56, 72, 90]
+    actual: List[int] = list(islice(oblong(), 10))
     assert actual == expected
 
 

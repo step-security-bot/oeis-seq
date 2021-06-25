@@ -14,6 +14,7 @@ from .lazy_caterer import lazy_caterer
 from .leonardo import leonardo
 from .loeschian import loeschian
 from .lucas import lucas
+from .oblong import oblong
 from .padovan import padovan
 from .pell import pell
 from .perfect import perfect
@@ -69,6 +70,7 @@ __all__ = [
     "lucas",
     "natural",
     "nonagonal",
+    "oblong",
     "octagonal",
     "padovan",
     "pell",
