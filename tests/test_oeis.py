@@ -1,7 +1,6 @@
 # coding=utf-8
 # flake8: noqa
 from itertools import islice
-from oeis.superperfect import superperfect
 from typing import List
 
 from oeis import (
@@ -11,10 +10,14 @@ from oeis import (
     centered_square,
     centered_triangular,
     composite,
+    decagonal,
     deficient,
+    dodecagonal,
     eratosthenes,
     factorial,
     fibonacci,
+    hendecagonal,
+    heptagonal,
     hexagonal,
     jacobsthal,
     lazy_caterer,
@@ -22,15 +25,18 @@ from oeis import (
     loeschian,
     lucas,
     natural,
+    nonagonal,
     oblong,
+    octagonal,
     padovan,
     pell,
+    pentagonal,
     perfect,
     perrin,
     polite,
-    polygonal,
     recaman,
     semiperfect,
+    square,
     square_pyramidal,
     sylvester,
     totient,
@@ -41,6 +47,7 @@ from oeis import (
     weird,
     woodall,
 )
+from oeis.superperfect import superperfect
 
 
 def test_abundant() -> None:
@@ -79,6 +86,18 @@ def test_composite() -> None:
     assert actual == expected
 
 
+def test_decagonal() -> None:
+    expected: List[int] = [0, 1, 10, 27, 52, 85, 126, 175, 232, 297]
+    actual: List[int] = list(islice(decagonal(), 10))
+    assert actual == expected
+
+
+def test_dodecagonal() -> None:
+    expected: List[int] = [0, 1, 12, 33, 64, 105, 156, 217, 288, 369]
+    actual: List[int] = list(islice(dodecagonal(), 10))
+    assert actual == expected
+
+
 def test_deficient() -> None:
     expected: List[int] = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
     actual: List[int] = list(islice(deficient(), 10))
@@ -103,9 +122,21 @@ def test_fibonacci() -> None:
     assert actual == expected
 
 
-def test_polygonal() -> None:
-    expected: List[int] = [0, 1, 6, 15, 28, 45, 66, 91, 120, 153]
-    actual: List[int] = list(islice(polygonal(4), 10))
+def test_pentagonal() -> None:
+    expected: List[int] = [0, 1, 5, 12, 22, 35, 51, 70, 92, 117]
+    actual: List[int] = list(islice(pentagonal(), 10))
+    assert actual == expected
+
+
+def test_hendecagonal() -> None:
+    expected: List[int] = [0, 1, 11, 30, 58, 95, 141, 196, 260, 333]
+    actual: List[int] = list(islice(hendecagonal(), 10))
+    assert actual == expected
+
+
+def test_heptagonal() -> None:
+    expected: List[int] = [0, 1, 7, 18, 34, 55, 81, 112, 148, 189]
+    actual: List[int] = list(islice(heptagonal(), 10))
     assert actual == expected
 
 
@@ -151,9 +182,21 @@ def test_natural() -> None:
     assert actual == expected
 
 
+def test_nonagonal() -> None:
+    expected: List[int] = [0, 1, 9, 24, 46, 75, 111, 154, 204, 261]
+    actual: List[int] = list(islice(nonagonal(), 10))
+    assert actual == expected
+
+
 def test_oblong() -> None:
     expected: List[int] = [0, 2, 6, 12, 20, 30, 42, 56, 72, 90]
     actual: List[int] = list(islice(oblong(), 10))
+    assert actual == expected
+
+
+def test_octagonal() -> None:
+    expected: List[int] = [0, 1, 8, 21, 40, 65, 96, 133, 176, 225]
+    actual: List[int] = list(islice(octagonal(), 10))
     assert actual == expected
 
 
@@ -230,6 +273,12 @@ def test_totient() -> None:
 def test_triangular() -> None:
     expected: List[int] = [0, 1, 3, 6, 10, 15, 21, 28, 36, 45]
     actual: List[int] = list(islice(triangular(), 10))
+    assert actual == expected
+
+
+def test_square() -> None:
+    expected: List[int] = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+    actual: List[int] = list(islice(square(), 10))
     assert actual == expected
 
 
