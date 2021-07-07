@@ -4,6 +4,7 @@ from math import gcd
 
 from hypothesis import given
 from hypothesis.strategies import integers
+
 from oeis.utils import coprime
 
 
