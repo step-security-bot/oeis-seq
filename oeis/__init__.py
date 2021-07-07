@@ -45,7 +45,7 @@ from .vauban import vauban
 from .weird import weird
 from .woodall import woodall
 
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 __all__ = [
     "abundant",
     "buttered_croissant",
