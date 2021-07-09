@@ -60,6 +60,7 @@ from oeis import (
     weird,
     woodall,
 )
+from oeis.superperfect import superperfect
 
 
 def test_abundant() -> None:
