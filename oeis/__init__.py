@@ -3,7 +3,19 @@
 from .abundant import abundant
 from .buttered_croissant import buttered_croissant
 from .catalan import catalan
-from .centered_polygonal import centered_polygonal, centered_square, centered_triangular
+from .centered_polygonal import (
+    centered_decagonal,
+    centered_dodecagonal,
+    centered_hendecagonal,
+    centered_heptagonal,
+    centered_hexagonal,
+    centered_nonagonal,
+    centered_octagonal,
+    centered_pentagonal,
+    centered_polygonal,
+    centered_square,
+    centered_triangular,
+)
 from .composite import composite
 from .deficient import deficient
 from .eratosthenes import eratosthenes
@@ -34,7 +46,14 @@ from .polygonal import (
     square,
     triangular,
 )
-from .pyramidal import square_pyramidal, triangular_pyramidal
+from .pyramidal import (
+    heptagonal_pyramidal,
+    hexagonal_pyramidal,
+    octagonal_pyramidal,
+    pentagonal_pyramidal,
+    square_pyramidal,
+    triangular_pyramidal,
+)
 from .recaman import recaman
 from .semiperfect import semiperfect
 from .superperfect import superperfect
@@ -45,11 +64,19 @@ from .vauban import vauban
 from .weird import weird
 from .woodall import woodall
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 __all__ = [
     "abundant",
     "buttered_croissant",
     "catalan",
+    "centered_decagonal",
+    "centered_dodecagonal",
+    "centered_hendecagonal",
+    "centered_heptagonal",
+    "centered_hexagonal",
+    "centered_nonagonal",
+    "centered_octagonal",
+    "centered_pentagonal",
     "centered_polygonal",
     "centered_square",
     "centered_triangular",
@@ -62,7 +89,9 @@ __all__ = [
     "fibonacci",
     "hendecagonal",
     "heptagonal",
+    "heptagonal_pyramidal",
     "hexagonal",
+    "hexagonal_pyramidal",
     "jacobsthal",
     "lazy_caterer",
     "leonardo",
@@ -72,9 +101,11 @@ __all__ = [
     "nonagonal",
     "oblong",
     "octagonal",
+    "octagonal_pyramidal",
     "padovan",
     "pell",
     "pentagonal",
+    "pentagonal_pyramidal",
     "perfect",
     "perrin",
     "polite",

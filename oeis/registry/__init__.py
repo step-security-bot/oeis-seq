@@ -31,6 +31,8 @@ class OEISRegistry(Generic[T]):
             Args:
                 func: Sequence generator
             """
+            if identifier in self.sequences:
+                raise KeyError(f"Duplicate identifier found: {identifier}")
             self.sequences[identifier] = func
             return func
 

@@ -7,6 +7,14 @@ from oeis import (
     abundant,
     buttered_croissant,
     catalan,
+    centered_decagonal,
+    centered_dodecagonal,
+    centered_hendecagonal,
+    centered_heptagonal,
+    centered_hexagonal,
+    centered_nonagonal,
+    centered_octagonal,
+    centered_pentagonal,
     centered_square,
     centered_triangular,
     composite,
@@ -18,7 +26,9 @@ from oeis import (
     fibonacci,
     hendecagonal,
     heptagonal,
+    heptagonal_pyramidal,
     hexagonal,
+    hexagonal_pyramidal,
     jacobsthal,
     lazy_caterer,
     leonardo,
@@ -28,9 +38,11 @@ from oeis import (
     nonagonal,
     oblong,
     octagonal,
+    octagonal_pyramidal,
     padovan,
     pell,
     pentagonal,
+    pentagonal_pyramidal,
     perfect,
     perrin,
     polite,
@@ -38,6 +50,7 @@ from oeis import (
     semiperfect,
     square,
     square_pyramidal,
+    superperfect,
     sylvester,
     totient,
     triangular,
@@ -65,6 +78,54 @@ def test_buttered_croissant() -> None:
 def test_catalan() -> None:
     expected: List[int] = [1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862]
     actual: List[int] = list(islice(catalan(), 10))
+    assert actual == expected
+
+
+def test_centered_decagonal() -> None:
+    expected: List[int] = [1, 11, 31, 61, 101, 151, 211, 281, 361, 451]
+    actual: List[int] = list(islice(centered_decagonal(), 10))
+    assert actual == expected
+
+
+def test_centered_dodecagonal() -> None:
+    expected: List[int] = [1, 13, 37, 73, 121, 181, 253, 337, 433, 541]
+    actual: List[int] = list(islice(centered_dodecagonal(), 10))
+    assert actual == expected
+
+
+def test_centered_hendecagonal() -> None:
+    expected: List[int] = [1, 12, 34, 67, 111, 166, 232, 309, 397, 496]
+    actual: List[int] = list(islice(centered_hendecagonal(), 10))
+    assert actual == expected
+
+
+def test_centered_heptagonal() -> None:
+    expected: List[int] = [1, 8, 22, 43, 71, 106, 148, 197, 253, 316]
+    actual: List[int] = list(islice(centered_heptagonal(), 10))
+    assert actual == expected
+
+
+def test_centered_hexagonal() -> None:
+    expected: List[int] = [1, 7, 19, 37, 61, 91, 127, 169, 217, 271]
+    actual: List[int] = list(islice(centered_hexagonal(), 10))
+    assert actual == expected
+
+
+def test_centered_nonagonal() -> None:
+    expected: List[int] = [1, 10, 28, 55, 91, 136, 190, 253, 325, 406]
+    actual: List[int] = list(islice(centered_nonagonal(), 10))
+    assert actual == expected
+
+
+def test_centered_octagonal() -> None:
+    expected: List[int] = [1, 9, 25, 49, 81, 121, 169, 225, 289, 361]
+    actual: List[int] = list(islice(centered_octagonal(), 10))
+    assert actual == expected
+
+
+def test_centered_pentagonal() -> None:
+    expected: List[int] = [1, 6, 16, 31, 51, 76, 106, 141, 181, 226]
+    actual: List[int] = list(islice(centered_pentagonal(), 10))
     assert actual == expected
 
 
@@ -140,9 +201,21 @@ def test_heptagonal() -> None:
     assert actual == expected
 
 
+def test_heptagonal_pyramidal() -> None:
+    expected: List[int] = [0, 1, 8, 26, 60, 115, 196, 308, 456, 645]
+    actual: List[int] = list(islice(heptagonal_pyramidal(), 10))
+    assert actual == expected
+
+
 def test_hexagonal() -> None:
     expected: List[int] = [0, 1, 6, 15, 28, 45, 66, 91, 120, 153]
     actual: List[int] = list(islice(hexagonal(), 10))
+    assert actual == expected
+
+
+def test_hexagonal_pyramidal() -> None:
+    expected: List[int] = [0, 1, 7, 22, 50, 95, 161, 252, 372, 525]
+    actual: List[int] = list(islice(hexagonal_pyramidal(), 10))
     assert actual == expected
 
 
@@ -200,6 +273,12 @@ def test_octagonal() -> None:
     assert actual == expected
 
 
+def test_octagonal_pyramidal() -> None:
+    expected: List[int] = [0, 1, 9, 30, 70, 135, 231, 364, 540, 765]
+    actual: List[int] = list(islice(octagonal_pyramidal(), 10))
+    assert actual == expected
+
+
 def test_padovan() -> None:
     expected: List[int] = [1, 1, 1, 2, 2, 3, 4, 5, 7, 9]
     actual: List[int] = list(islice(padovan(), 10))
@@ -209,6 +288,12 @@ def test_padovan() -> None:
 def test_pell() -> None:
     expected: List[int] = [0, 1, 2, 5, 12, 29, 70, 169, 408, 985]
     actual: List[int] = list(islice(pell(), 10))
+    assert actual == expected
+
+
+def test_pentagonal_pyramidal() -> None:
+    expected: List[int] = [0, 1, 6, 18, 40, 75, 126, 196, 288, 405]
+    actual: List[int] = list(islice(pentagonal_pyramidal(), 10))
     assert actual == expected
 
 
@@ -307,8 +392,8 @@ def test_vauban() -> None:
 
 
 def test_weird() -> None:
-    expected: List[int] = [70, 836, 4030, 5830, 7192, 7912, 9272, 10430, 10570, 10792]
-    actual: List[int] = list(islice(weird(), 10))
+    expected: List[int] = [70, 836, 4030, 5830, 7192, 7912, 9272]
+    actual: List[int] = list(islice(weird(), 7))
     assert actual == expected
 
 
