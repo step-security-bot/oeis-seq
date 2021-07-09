@@ -29,7 +29,7 @@ jobs:
         run: poetry run flake8 --count oeis tests
       - name: Run tests with Poetry
         run: |
-          poetry run pytest --junit-xml=junit/test-results-${{ matrix.python-version }}.xml --cov=oeis --cov-report=xml --cov-report=html
+          poetry run pytest --junit-xml=junit/test-results-${{ matrix.python-version }}.xml --cov=oeis --cov-branch --cov-report=xml -n auto
       - name: Upload pytest test results
         uses: actions/upload-artifact@v2
         with:
