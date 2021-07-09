@@ -26,7 +26,9 @@ from oeis import (
     fibonacci,
     hendecagonal,
     heptagonal,
+    heptagonal_pyramidal,
     hexagonal,
+    hexagonal_pyramidal,
     jacobsthal,
     lazy_caterer,
     leonardo,
@@ -36,9 +38,11 @@ from oeis import (
     nonagonal,
     oblong,
     octagonal,
+    octagonal_pyramidal,
     padovan,
     pell,
     pentagonal,
+    pentagonal_pyramidal,
     perfect,
     perrin,
     polite,
@@ -56,7 +60,6 @@ from oeis import (
     weird,
     woodall,
 )
-from oeis.superperfect import superperfect
 
 
 def test_abundant() -> None:
@@ -197,9 +200,21 @@ def test_heptagonal() -> None:
     assert actual == expected
 
 
+def test_heptagonal_pyramidal() -> None:
+    expected: List[int] = [0, 1, 8, 26, 60, 115, 196, 308, 456, 645]
+    actual: List[int] = list(islice(heptagonal_pyramidal(), 10))
+    assert actual == expected
+
+
 def test_hexagonal() -> None:
     expected: List[int] = [0, 1, 6, 15, 28, 45, 66, 91, 120, 153]
     actual: List[int] = list(islice(hexagonal(), 10))
+    assert actual == expected
+
+
+def test_hexagonal_pyramidal() -> None:
+    expected: List[int] = [0, 1, 7, 22, 50, 95, 161, 252, 372, 525]
+    actual: List[int] = list(islice(hexagonal_pyramidal(), 10))
     assert actual == expected
 
 
@@ -257,6 +272,12 @@ def test_octagonal() -> None:
     assert actual == expected
 
 
+def test_octagonal_pyramidal() -> None:
+    expected: List[int] = [0, 1, 9, 30, 70, 135, 231, 364, 540, 765]
+    actual: List[int] = list(islice(octagonal_pyramidal(), 10))
+    assert actual == expected
+
+
 def test_padovan() -> None:
     expected: List[int] = [1, 1, 1, 2, 2, 3, 4, 5, 7, 9]
     actual: List[int] = list(islice(padovan(), 10))
@@ -266,6 +287,12 @@ def test_padovan() -> None:
 def test_pell() -> None:
     expected: List[int] = [0, 1, 2, 5, 12, 29, 70, 169, 408, 985]
     actual: List[int] = list(islice(pell(), 10))
+    assert actual == expected
+
+
+def test_pentagonal_pyramidal() -> None:
+    expected: List[int] = [0, 1, 6, 18, 40, 75, 126, 196, 288, 405]
+    actual: List[int] = list(islice(pentagonal_pyramidal(), 10))
     assert actual == expected
 
 

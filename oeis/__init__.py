@@ -46,7 +46,14 @@ from .polygonal import (
     square,
     triangular,
 )
-from .pyramidal import square_pyramidal, triangular_pyramidal
+from .pyramidal import (
+    heptagonal_pyramidal,
+    hexagonal_pyramidal,
+    octagonal_pyramidal,
+    pentagonal_pyramidal,
+    square_pyramidal,
+    triangular_pyramidal,
+)
 from .recaman import recaman
 from .semiperfect import semiperfect
 from .superperfect import superperfect
@@ -82,7 +89,9 @@ __all__ = [
     "fibonacci",
     "hendecagonal",
     "heptagonal",
+    "heptagonal_pyramidal",
     "hexagonal",
+    "hexagonal_pyramidal",
     "jacobsthal",
     "lazy_caterer",
     "leonardo",
@@ -92,9 +101,11 @@ __all__ = [
     "nonagonal",
     "oblong",
     "octagonal",
+    "octagonal_pyramidal",
     "padovan",
     "pell",
     "pentagonal",
+    "pentagonal_pyramidal",
     "perfect",
     "perrin",
     "polite",
