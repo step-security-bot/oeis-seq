@@ -5,6 +5,7 @@ from typing import List
 
 from oeis import (
     abundant,
+    arithmetic,
     buttered_croissant,
     catalan,
     centered_decagonal,
@@ -66,6 +67,12 @@ from oeis.superperfect import superperfect
 def test_abundant() -> None:
     expected: List[int] = [12, 18, 20, 24, 30, 36, 40, 42, 48, 54]
     actual: List[int] = list(islice(abundant(), 10))
+    assert actual == expected
+
+
+def test_arithmetic() -> None:
+    expected: List[int] = [1, 3, 5, 6, 7, 11, 13, 14, 15, 17]
+    actual: List[int] = list(islice(arithmetic(), 10))
     assert actual == expected
 
 

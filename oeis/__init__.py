@@ -1,6 +1,7 @@
 # coding=utf-8
 """OEIS Sequences."""
 from .abundant import abundant
+from .arithmetic import arithmetic
 from .buttered_croissant import buttered_croissant
 from .catalan import catalan
 from .centered_polygonal import (
@@ -67,6 +68,7 @@ from .woodall import woodall
 __version__ = "0.1.6"
 __all__ = [
     "abundant",
+    "arithmetic",
     "buttered_croissant",
     "catalan",
     "centered_decagonal",
