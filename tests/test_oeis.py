@@ -31,6 +31,7 @@ from oeis import (
     hexagonal,
     hexagonal_pyramidal,
     jacobsthal,
+    kynea,
     lazy_caterer,
     leonardo,
     loeschian,
@@ -229,6 +230,12 @@ def test_hexagonal_pyramidal() -> None:
 def test_jacobsthal() -> None:
     expected: List[int] = [0, 1, 1, 3, 5, 11, 21, 43, 85, 171]
     actual: List[int] = list(islice(jacobsthal(), 10))
+    assert actual == expected
+
+
+def test_kynea() -> None:
+    expected: List[int] = [7, 23, 79, 287, 1087, 4223, 16639, 66047, 263167, 1050623]
+    actual: List[int] = list(islice(kynea(), 10))
     assert actual == expected
 
 

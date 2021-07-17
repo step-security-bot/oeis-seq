@@ -23,6 +23,7 @@ from .eratosthenes import eratosthenes
 from .factorial import factorial
 from .fibonacci import fibonacci
 from .jacobsthal import jacobsthal
+from .kynea import kynea
 from .lazy_caterer import lazy_caterer
 from .leonardo import leonardo
 from .loeschian import loeschian
@@ -95,6 +96,7 @@ __all__ = [
     "hexagonal",
     "hexagonal_pyramidal",
     "jacobsthal",
+    "kynea",
     "lazy_caterer",
     "leonardo",
     "loeschian",
