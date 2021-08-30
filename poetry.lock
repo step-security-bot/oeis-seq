@@ -229,7 +229,7 @@ python-versions = "*"
 
 [[package]]
 name = "hypothesis"
-version = "6.17.0"
+version = "6.17.2"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -797,8 +797,8 @@ gprof2dot = [
     {file = "gprof2dot-2021.2.21.tar.gz", hash = "sha256:1223189383b53dcc8ecfd45787ac48c0ed7b4dbc16ee8b88695d053eea1acabf"},
 ]
 hypothesis = [
-    {file = "hypothesis-6.17.0-py3-none-any.whl", hash = "sha256:588f5ea6b075cd402bfe1573815c2f6003a3265c2e9e7a2774d556c16073dc6d"},
-    {file = "hypothesis-6.17.0.tar.gz", hash = "sha256:c79001c2f94788f18e1a1cae1292a8db4f588f3662b613d6a6455b9ea9bf31a1"},
+    {file = "hypothesis-6.17.2-py3-none-any.whl", hash = "sha256:98216ffd572d2edf052d3474409d76e642cac62d9c7ffe25d9a02c39066a67e4"},
+    {file = "hypothesis-6.17.2.tar.gz", hash = "sha256:f91e549d6ccca583fe9d2f8e56f23501aa48ba6e46491c60716390cc2670c5f8"},
 ]
 identify = [
     {file = "identify-2.2.11-py2.py3-none-any.whl", hash = "sha256:7abaecbb414e385752e8ce02d8c494f4fbc780c975074b46172598a28f1ab839"},
