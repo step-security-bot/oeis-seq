@@ -544,7 +544,7 @@ tests = ["pytest-virtualenv"]
 
 [[package]]
 name = "pytest-xdist"
-version = "2.3.0"
+version = "2.4.0"
 description = "pytest xdist plugin for distributed testing and loop-on-failing modes"
 category = "dev"
 optional = false
@@ -558,6 +558,7 @@ pytest-forked = "*"
 
 [package.extras]
 psutil = ["psutil (>=3.0)"]
+setproctitle = ["setproctitle"]
 testing = ["filelock"]
 
 [[package]]
@@ -657,7 +658,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "fb664c524bdf43e2047ee0201096af76af9a973379cd7db743d98630e4639ea3"
+content-hash = "99b8313992b7911cb8758b83cff985043c8ff2082bfb66f166d7a399b9260df2"
 
 [metadata.files]
 atomicwrites = [
@@ -1064,8 +1065,8 @@ pytest-profiling = [
     {file = "pytest_profiling-1.7.0-py3.6.egg", hash = "sha256:6bce4e2edc04409d2f3158c16750fab8074f62d404cc38eeb075dff7fcbb996c"},
 ]
 pytest-xdist = [
-    {file = "pytest-xdist-2.3.0.tar.gz", hash = "sha256:e8ecde2f85d88fbcadb7d28cb33da0fa29bca5cf7d5967fa89fc0e97e5299ea5"},
-    {file = "pytest_xdist-2.3.0-py3-none-any.whl", hash = "sha256:ed3d7da961070fce2a01818b51f6888327fb88df4379edeb6b9d990e789d9c8d"},
+    {file = "pytest-xdist-2.4.0.tar.gz", hash = "sha256:89b330316f7fc475f999c81b577c2b926c9569f3d397ae432c0c2e2496d61ff9"},
+    {file = "pytest_xdist-2.4.0-py3-none-any.whl", hash = "sha256:7b61ebb46997a0820a263553179d6d1e25a8c50d8a8620cd1aa1e20e3be99168"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},
