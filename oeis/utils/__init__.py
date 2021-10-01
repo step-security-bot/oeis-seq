@@ -113,6 +113,20 @@ def is_prime(n: int, k: int = 8) -> bool:
 
 
 @lru_cache
+def is_quasiperfect(n: int) -> bool:
+    """
+    Return whether or not a number is a Quasiperfect number.
+
+        Args:
+            n: Number.
+    """
+    sig: int = sigma(n)
+    if sig - (2 * n) == 2:
+        return True
+    return False
+
+
+@lru_cache
 def is_semiperfect(n: int) -> bool:
     """
     Return whether or not a number is a Semiperfect number.

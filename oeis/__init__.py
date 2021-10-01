@@ -32,6 +32,7 @@ from .oblong import oblong
 from .padovan import padovan
 from .pell import pell
 from .perfect import perfect
+from .period2 import period2
 from .perrin import perrin
 from .polite import polite
 from .polygonal import (
@@ -56,6 +57,7 @@ from .pyramidal import (
     square_pyramidal,
     triangular_pyramidal,
 )
+from .quasiperfect import quasiperfect
 from .recaman import recaman
 from .semiperfect import semiperfect
 from .superperfect import superperfect
@@ -111,9 +113,11 @@ __all__ = [
     "pentagonal",
     "pentagonal_pyramidal",
     "perfect",
+    "period2",
     "perrin",
     "polite",
     "polygonal",
+    "quasiperfect",
     "recaman",
     "semiperfect",
     "square",

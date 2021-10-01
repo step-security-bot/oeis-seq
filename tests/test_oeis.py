@@ -46,8 +46,10 @@ from oeis import (
     pentagonal,
     pentagonal_pyramidal,
     perfect,
+    period2,
     perrin,
     polite,
+    quasiperfect,
     recaman,
     semiperfect,
     square,
@@ -317,6 +319,12 @@ def test_perfect() -> None:
     assert actual == expected
 
 
+def test_period2() -> None:
+    expected: List[int] = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+    actual: List[int] = list(islice(period2(), 10))
+    assert actual == expected
+
+
 def test_perrin() -> None:
     expected: List[int] = [3, 0, 2, 3, 2, 5, 5, 7, 10, 12]
     actual: List[int] = list(islice(perrin(), 10))
@@ -326,6 +334,12 @@ def test_perrin() -> None:
 def test_polite() -> None:
     expected: List[int] = [3, 5, 6, 7, 9, 10, 11, 12, 13, 14]
     actual: List[int] = list(islice(polite(), 10))
+    assert actual == expected
+
+
+def test_quasiperfect() -> None:
+    expected: List[int] = [20, 104, 464, 650, 1952, 130304, 522752]
+    actual: List[int] = list(islice(quasiperfect(), 7))
     assert actual == expected
 
 
