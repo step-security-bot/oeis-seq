@@ -253,7 +253,7 @@ python-versions = "*"
 
 [[package]]
 name = "hypothesis"
-version = "6.29.3"
+version = "6.30.1"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -702,7 +702,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "39315ee0b0f4a8164f1366050c41dad700927d982ebe696ca597aeb2c0152166"
+content-hash = "75a94c18702d545c1bacb6925b7fadc6edf05842de2f731fb367a7c6a32cb476"
 
 [metadata.files]
 atomicwrites = [
@@ -834,8 +834,8 @@ gprof2dot = [
     {file = "gprof2dot-2021.2.21.tar.gz", hash = "sha256:1223189383b53dcc8ecfd45787ac48c0ed7b4dbc16ee8b88695d053eea1acabf"},
 ]
 hypothesis = [
-    {file = "hypothesis-6.29.3-py3-none-any.whl", hash = "sha256:d19c10fd3b01d37313b31e192e83e50e55bd43d6d2868599596f29b35a0b85b5"},
-    {file = "hypothesis-6.29.3.tar.gz", hash = "sha256:4dc3f936cfa13431aa1a1188273a451d71a8375a5e8a04b368185f3f11398789"},
+    {file = "hypothesis-6.30.1-py3-none-any.whl", hash = "sha256:adb42a52bc3c1300d0a0a221870ce5c264bee2e54b0473de6767c3ae02649b5f"},
+    {file = "hypothesis-6.30.1.tar.gz", hash = "sha256:25e0e581f999281ff765aba3c3f1e3ce289e82a1ff1b9de2c5082b37113aa448"},
 ]
 identify = [
     {file = "identify-2.3.1-py2.py3-none-any.whl", hash = "sha256:5a5000bd3293950d992843c0ef3d82b90a582de2161557bda7f493c8c8864f26"},
