@@ -253,7 +253,7 @@ python-versions = "*"
 
 [[package]]
 name = "hypothesis"
-version = "6.30.1"
+version = "6.31.0"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -268,7 +268,7 @@ all = ["black (>=19.10b0)", "click (>=7.0)", "django (>=2.2)", "dpcontracts (>=0
 cli = ["click (>=7.0)", "black (>=19.10b0)", "rich (>=9.0.0)"]
 codemods = ["libcst (>=0.3.16)"]
 dateutil = ["python-dateutil (>=1.4)"]
-django = ["pytz (>=2014.1)", "django (>=2.2)"]
+django = ["django (>=2.2)"]
 dpcontracts = ["dpcontracts (>=0.4)"]
 ghostwriter = ["black (>=19.10b0)"]
 lark = ["lark-parser (>=0.6.5)"]
@@ -702,7 +702,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "75a94c18702d545c1bacb6925b7fadc6edf05842de2f731fb367a7c6a32cb476"
+content-hash = "e9ec162dc4134ccd6eeb16c81cfb59ab87feb54aff9e2955c430af94fbe8c39d"
 
 [metadata.files]
 atomicwrites = [
@@ -834,8 +834,8 @@ gprof2dot = [
     {file = "gprof2dot-2021.2.21.tar.gz", hash = "sha256:1223189383b53dcc8ecfd45787ac48c0ed7b4dbc16ee8b88695d053eea1acabf"},
 ]
 hypothesis = [
-    {file = "hypothesis-6.30.1-py3-none-any.whl", hash = "sha256:adb42a52bc3c1300d0a0a221870ce5c264bee2e54b0473de6767c3ae02649b5f"},
-    {file = "hypothesis-6.30.1.tar.gz", hash = "sha256:25e0e581f999281ff765aba3c3f1e3ce289e82a1ff1b9de2c5082b37113aa448"},
+    {file = "hypothesis-6.31.0-py3-none-any.whl", hash = "sha256:20b55b628cb772c754a119c0ad572e84de06a5b94cfc79134f0a4ee70516c3ce"},
+    {file = "hypothesis-6.31.0.tar.gz", hash = "sha256:cc2e8757b5ef12fca27bf254dd53c449db074b1963243c4ee6f2b984aa02815e"},
 ]
 identify = [
     {file = "identify-2.3.1-py2.py3-none-any.whl", hash = "sha256:5a5000bd3293950d992843c0ef3d82b90a582de2161557bda7f493c8c8864f26"},
