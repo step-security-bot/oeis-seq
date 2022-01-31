@@ -9,4 +9,4 @@ from .registry import registry
 def woodall() -> Iterable[int]:
     """Woodall (or Riesel) numbers."""
     for n in count(start=1):
-        yield n * (2 ** n) - 1
+        yield n * (2**n) - 1
