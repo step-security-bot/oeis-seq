@@ -22,6 +22,7 @@ from .deficient import deficient
 from .eratosthenes import eratosthenes
 from .factorial import factorial
 from .fibonacci import fibonacci
+from .icosahedral import icosahedral
 from .jacobsthal import jacobsthal
 from .kynea import kynea
 from .lazy_caterer import lazy_caterer
@@ -68,7 +69,7 @@ from .vauban import vauban
 from .weird import weird
 from .woodall import woodall
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
 __all__ = [
     "abundant",
     "arithmetic",
@@ -97,6 +98,7 @@ __all__ = [
     "heptagonal_pyramidal",
     "hexagonal",
     "hexagonal_pyramidal",
+    "icosahedral",
     "jacobsthal",
     "kynea",
     "lazy_caterer",
