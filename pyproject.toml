@@ -50,28 +50,28 @@ license = "MIT"
 name = "oeis-seq"
 packages = [{ include = "oeis" }]
 repository = "https://github.com/reidhoch/oeis-seq"
-version = "0.1.6"
+version = "0.1.7"
 
 [tool.poetry.dependencies]
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-black = "21.6b0"
-flake8 = "^3.9"
-flake8-bugbear = "^21.4"
-flake8-commas = "^2.0"
+black = "22.1.0"
+flake8 = "^4.0"
+flake8-bugbear = "^22.3"
+flake8-commas = "^2.1"
 flake8-docstrings = "^1.6"
 flake8-import-order = "^0.18"
-flake8-pytest-style = "^1.5"
-hypothesis = "^6.14"
-isort = "^5.9"
-matplotlib = "^3.4"
-mypy = "^0.910"
-pre-commit = "^2.13"
-pytest = "^6.2"
-pytest-cov = "^2.11"
+flake8-pytest-style = "^1.6"
+hypothesis = "^6.39"
+isort = "^5.10"
+matplotlib = "^3.5"
+mypy = "^0.941"
+pre-commit = "^2.17"
+pytest = "^7.1"
+pytest-cov = "^3.0"
 pytest-profiling = "^1.7"
-pytest-xdist = {extras = ["psutil"], version = "^2.3"}
+pytest-xdist = {extras = ["psutil"], version = "^2.5"}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

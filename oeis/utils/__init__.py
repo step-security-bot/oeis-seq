@@ -48,7 +48,7 @@ def _is_composite(a: int, d: int, n: int, s: int) -> bool:
     if pow(a, d, n) == 1:
         return False
     for i in range(s):
-        if pow(a, 2 ** i * d, n) == n - 1:
+        if pow(a, 2**i * d, n) == n - 1:
             return False
     return True
 
@@ -110,6 +110,20 @@ def is_prime(n: int, k: int = 8) -> bool:
             return False
 
     return True
+
+
+@lru_cache
+def is_quasiperfect(n: int) -> bool:
+    """
+    Return whether or not a number is a Quasiperfect number.
+
+        Args:
+            n: Number.
+    """
+    sig: int = sigma(n)
+    if sig - (2 * n) == 2:
+        return True
+    return False
 
 
 @lru_cache

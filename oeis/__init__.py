@@ -1,6 +1,7 @@
 # coding=utf-8
 """OEIS Sequences."""
 from .abundant import abundant
+from .arithmetic import arithmetic
 from .buttered_croissant import buttered_croissant
 from .catalan import catalan
 from .centered_polygonal import (
@@ -21,7 +22,9 @@ from .deficient import deficient
 from .eratosthenes import eratosthenes
 from .factorial import factorial
 from .fibonacci import fibonacci
+from .icosahedral import icosahedral
 from .jacobsthal import jacobsthal
+from .kynea import kynea
 from .lazy_caterer import lazy_caterer
 from .leonardo import leonardo
 from .loeschian import loeschian
@@ -30,6 +33,7 @@ from .oblong import oblong
 from .padovan import padovan
 from .pell import pell
 from .perfect import perfect
+from .period2 import period2
 from .perrin import perrin
 from .polite import polite
 from .polygonal import (
@@ -54,6 +58,7 @@ from .pyramidal import (
     square_pyramidal,
     triangular_pyramidal,
 )
+from .quasiperfect import quasiperfect
 from .recaman import recaman
 from .semiperfect import semiperfect
 from .superperfect import superperfect
@@ -64,9 +69,10 @@ from .vauban import vauban
 from .weird import weird
 from .woodall import woodall
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
 __all__ = [
     "abundant",
+    "arithmetic",
     "buttered_croissant",
     "catalan",
     "centered_decagonal",
@@ -92,7 +98,9 @@ __all__ = [
     "heptagonal_pyramidal",
     "hexagonal",
     "hexagonal_pyramidal",
+    "icosahedral",
     "jacobsthal",
+    "kynea",
     "lazy_caterer",
     "leonardo",
     "loeschian",
@@ -107,9 +115,11 @@ __all__ = [
     "pentagonal",
     "pentagonal_pyramidal",
     "perfect",
+    "period2",
     "perrin",
     "polite",
     "polygonal",
+    "quasiperfect",
     "recaman",
     "semiperfect",
     "square",

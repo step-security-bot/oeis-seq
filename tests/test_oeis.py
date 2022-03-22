@@ -5,6 +5,7 @@ from typing import List
 
 from oeis import (
     abundant,
+    arithmetic,
     buttered_croissant,
     catalan,
     centered_decagonal,
@@ -29,7 +30,9 @@ from oeis import (
     heptagonal_pyramidal,
     hexagonal,
     hexagonal_pyramidal,
+    icosahedral,
     jacobsthal,
+    kynea,
     lazy_caterer,
     leonardo,
     loeschian,
@@ -44,8 +47,10 @@ from oeis import (
     pentagonal,
     pentagonal_pyramidal,
     perfect,
+    period2,
     perrin,
     polite,
+    quasiperfect,
     recaman,
     semiperfect,
     square,
@@ -66,6 +71,12 @@ from oeis.superperfect import superperfect
 def test_abundant() -> None:
     expected: List[int] = [12, 18, 20, 24, 30, 36, 40, 42, 48, 54]
     actual: List[int] = list(islice(abundant(), 10))
+    assert actual == expected
+
+
+def test_arithmetic() -> None:
+    expected: List[int] = [1, 3, 5, 6, 7, 11, 13, 14, 15, 17]
+    actual: List[int] = list(islice(arithmetic(), 10))
     assert actual == expected
 
 
@@ -219,9 +230,21 @@ def test_hexagonal_pyramidal() -> None:
     assert actual == expected
 
 
+def test_icosahedral() -> None:
+    expected: List[int] = [1, 12, 48, 124, 255, 456, 742, 1128, 1629, 2260]
+    actual: List[int] = list(islice(icosahedral(), 10))
+    assert actual == expected
+
+
 def test_jacobsthal() -> None:
     expected: List[int] = [0, 1, 1, 3, 5, 11, 21, 43, 85, 171]
     actual: List[int] = list(islice(jacobsthal(), 10))
+    assert actual == expected
+
+
+def test_kynea() -> None:
+    expected: List[int] = [7, 23, 79, 287, 1087, 4223, 16639, 66047, 263167, 1050623]
+    actual: List[int] = list(islice(kynea(), 10))
     assert actual == expected
 
 
@@ -303,6 +326,12 @@ def test_perfect() -> None:
     assert actual == expected
 
 
+def test_period2() -> None:
+    expected: List[int] = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+    actual: List[int] = list(islice(period2(), 10))
+    assert actual == expected
+
+
 def test_perrin() -> None:
     expected: List[int] = [3, 0, 2, 3, 2, 5, 5, 7, 10, 12]
     actual: List[int] = list(islice(perrin(), 10))
@@ -312,6 +341,12 @@ def test_perrin() -> None:
 def test_polite() -> None:
     expected: List[int] = [3, 5, 6, 7, 9, 10, 11, 12, 13, 14]
     actual: List[int] = list(islice(polite(), 10))
+    assert actual == expected
+
+
+def test_quasiperfect() -> None:
+    expected: List[int] = [20, 104, 464, 650, 1952, 130304, 522752]
+    actual: List[int] = list(islice(quasiperfect(), 7))
     assert actual == expected
 
 
