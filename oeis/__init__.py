@@ -21,6 +21,7 @@ from .composite import composite
 from .deficient import deficient
 from .eratosthenes import eratosthenes
 from .factorial import factorial
+from .fermat import fermat
 from .fibonacci import fibonacci
 from .icosahedral import icosahedral
 from .jacobsthal import jacobsthal
@@ -29,6 +30,7 @@ from .lazy_caterer import lazy_caterer
 from .leonardo import leonardo
 from .loeschian import loeschian
 from .lucas import lucas
+from .mersenne import mersenne
 from .oblong import oblong
 from .padovan import padovan
 from .pell import pell
@@ -92,6 +94,7 @@ __all__ = [
     "dodecagonal",
     "eratosthenes",
     "factorial",
+    "fermat",
     "fibonacci",
     "hendecagonal",
     "heptagonal",
@@ -105,6 +108,7 @@ __all__ = [
     "leonardo",
     "loeschian",
     "lucas",
+    "mersenne",
     "natural",
     "nonagonal",
     "oblong",

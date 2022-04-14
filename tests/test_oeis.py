@@ -24,6 +24,7 @@ from oeis import (
     dodecagonal,
     eratosthenes,
     factorial,
+    fermat,
     fibonacci,
     hendecagonal,
     heptagonal,
@@ -37,6 +38,7 @@ from oeis import (
     leonardo,
     loeschian,
     lucas,
+    mersenne,
     natural,
     nonagonal,
     oblong,
@@ -188,6 +190,12 @@ def test_factorial() -> None:
     assert actual == expected
 
 
+def test_fermat() -> None:
+    expected: List[int] = [3, 5, 17, 257, 65537, 4294967297, 18446744073709551617]
+    actual: List[int] = list(islice(fermat(), 7))
+    assert actual == expected
+
+
 def test_fibonacci() -> None:
     expected: List[int] = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
     actual: List[int] = list(islice(fibonacci(), 10))
@@ -269,6 +277,23 @@ def test_loeschian() -> None:
 def test_lucas() -> None:
     expected: List[int] = [2, 1, 3, 4, 7, 11, 18, 29, 47, 76]
     actual: List[int] = list(islice(lucas(), 10))
+    assert actual == expected
+
+
+def test_mersenne() -> None:
+    expected: List[int] = [
+        3,
+        7,
+        31,
+        127,
+        2047,
+        8191,
+        131071,
+        524287,
+        8388607,
+        536870911,
+    ]
+    actual: List[int] = list(islice(mersenne(), 10))
     assert actual == expected
 
 
