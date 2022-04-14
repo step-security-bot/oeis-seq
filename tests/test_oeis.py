@@ -7,6 +7,7 @@ from oeis import (
     abundant,
     arithmetic,
     buttered_croissant,
+    carmichael,
     catalan,
     centered_decagonal,
     centered_dodecagonal,
@@ -85,6 +86,12 @@ def test_arithmetic() -> None:
 def test_buttered_croissant() -> None:
     expected: List[int] = [1, 3, 7, 19, 55, 163, 487, 1459, 4375, 13123]
     actual: List[int] = list(islice(buttered_croissant(), 10))
+    assert actual == expected
+
+
+def test_carmichael() -> None:
+    expected: List[int] = [561, 1105, 1729, 2465, 2821, 6601, 8911, 10585, 15841, 29341]
+    actual: List[int] = list(islice(carmichael(), 10))
     assert actual == expected
 
 

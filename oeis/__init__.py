@@ -3,6 +3,7 @@
 from .abundant import abundant
 from .arithmetic import arithmetic
 from .buttered_croissant import buttered_croissant
+from .carmichael import carmichael
 from .catalan import catalan
 from .centered_polygonal import (
     centered_decagonal,
@@ -76,6 +77,7 @@ __all__ = [
     "abundant",
     "arithmetic",
     "buttered_croissant",
+    "carmichael",
     "catalan",
     "centered_decagonal",
     "centered_dodecagonal",
