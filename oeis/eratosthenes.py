@@ -1,5 +1,5 @@
 # coding=utf-8
-from typing import Iterable
+from typing import Dict, Iterable, List
 
 from oeis.registry import registry
 
@@ -7,7 +7,7 @@ from oeis.registry import registry
 @registry.register("A000040")
 def eratosthenes() -> Iterable[int]:
     """Sieve of Eratosthenes."""
-    discards = {}
+    discards: Dict[int, List[int]] = {}
     p: int = 2
 
     while True:
