@@ -63,6 +63,18 @@ from .pyramidal import (
 )
 from .quasiperfect import quasiperfect
 from .recaman import recaman
+from .rough import (
+    rough,
+    rough2,
+    rough3,
+    rough5,
+    rough7,
+    rough11,
+    rough13,
+    rough17,
+    rough19,
+    rough23,
+)
 from .semiperfect import semiperfect
 from .smooth import (
     smooth,
@@ -139,6 +151,16 @@ __all__ = [
     "polygonal",
     "quasiperfect",
     "recaman",
+    "rough",
+    "rough2",
+    "rough3",
+    "rough5",
+    "rough7",
+    "rough11",
+    "rough13",
+    "rough17",
+    "rough19",
+    "rough23",
     "semiperfect",
     "smooth",
     "smooth2",

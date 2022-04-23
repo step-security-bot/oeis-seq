@@ -12,7 +12,7 @@ def smooth(n: int) -> Iterable[int]:
     n-smooth numbers.
 
     Args:
-            n: # of sides.
+            n: prime integer.
     """
     if not is_prime(n, 8):
         raise ValueError("n must be a prime number.")
