@@ -64,6 +64,18 @@ from .pyramidal import (
 from .quasiperfect import quasiperfect
 from .recaman import recaman
 from .semiperfect import semiperfect
+from .smooth import (
+    smooth,
+    smooth2,
+    smooth3,
+    smooth5,
+    smooth7,
+    smooth11,
+    smooth13,
+    smooth17,
+    smooth19,
+    smooth23,
+)
 from .superperfect import superperfect
 from .sylvester import sylvester
 from .totient import totient
@@ -128,6 +140,16 @@ __all__ = [
     "quasiperfect",
     "recaman",
     "semiperfect",
+    "smooth",
+    "smooth2",
+    "smooth3",
+    "smooth5",
+    "smooth7",
+    "smooth11",
+    "smooth13",
+    "smooth17",
+    "smooth19",
+    "smooth23",
     "square",
     "sylvester",
     "square_pyramidal",

@@ -16,6 +16,7 @@ __all__ = [
     "is_prime",
     "is_semiperfect",
     "is_superperfect",
+    "prime_factors",
     "proper_divisors",
     "sigma",
 ]
@@ -152,6 +153,26 @@ def is_superperfect(n: int) -> bool:
             n: Number.
     """
     return sigma(sigma(n)) == 2 * n
+
+
+@lru_cache
+def prime_factors(n: int) -> List[int]:
+    """
+    Return prime factors of n.
+
+        Args:
+            n: Number.
+    """
+    factors: List[int] = []
+    i: int = 2
+    while n > 1:
+        if n % i == 0:
+            factors.append(i)
+            n = n // i
+        else:
+            i = i + 1
+
+    return factors
 
 
 @lru_cache

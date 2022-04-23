@@ -3,6 +3,8 @@
 from itertools import islice
 from typing import List
 
+from pytest import raises
+
 from oeis import (
     abundant,
     arithmetic,
@@ -56,6 +58,16 @@ from oeis import (
     quasiperfect,
     recaman,
     semiperfect,
+    smooth,
+    smooth2,
+    smooth3,
+    smooth5,
+    smooth7,
+    smooth11,
+    smooth13,
+    smooth17,
+    smooth19,
+    smooth23,
     square,
     square_pyramidal,
     superperfect,
@@ -68,7 +80,6 @@ from oeis import (
     weird,
     woodall,
 )
-from oeis.superperfect import superperfect
 
 
 def test_abundant() -> None:
@@ -391,6 +402,65 @@ def test_recaman() -> None:
 def test_semiperfect() -> None:
     expected: List[int] = [6, 12, 18, 20, 24, 28, 30, 36, 40, 42]
     actual: List[int] = list(islice(semiperfect(), 10))
+    assert actual == expected
+
+
+def test_smooth_bad_n() -> None:
+    with raises(ValueError):
+        actual: List[int] = list(islice(smooth(1), 10))
+
+
+def test_smooth2() -> None:
+    expected: List[int] = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
+    actual: List[int] = list(islice(smooth2(), 10))
+    assert actual == expected
+
+
+def test_smooth3() -> None:
+    expected: List[int] = [1, 2, 3, 4, 6, 8, 9, 12, 16, 18]
+    actual: List[int] = list(islice(smooth3(), 10))
+    assert actual == expected
+
+
+def test_smooth5() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 6, 8, 9, 10, 12]
+    actual: List[int] = list(islice(smooth5(), 10))
+    assert actual == expected
+
+
+def test_smooth7() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    actual: List[int] = list(islice(smooth7(), 10))
+    assert actual == expected
+
+
+def test_smooth11() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    actual: List[int] = list(islice(smooth11(), 10))
+    assert actual == expected
+
+
+def test_smooth13() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    actual: List[int] = list(islice(smooth13(), 10))
+    assert actual == expected
+
+
+def test_smooth17() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    actual: List[int] = list(islice(smooth17(), 10))
+    assert actual == expected
+
+
+def test_smooth19() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    actual: List[int] = list(islice(smooth19(), 10))
+    assert actual == expected
+
+
+def test_smooth23() -> None:
+    expected: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    actual: List[int] = list(islice(smooth23(), 10))
     assert actual == expected
 
 
