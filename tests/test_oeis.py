@@ -86,6 +86,7 @@ from oeis import (
     triangular,
     triangular_pyramidal,
     tribonacci,
+    unusual,
     vauban,
     weird,
     woodall,
@@ -588,6 +589,12 @@ def test_triangular_pyramidal() -> None:
 def test_tribonacci() -> None:
     expected: List[int] = [0, 0, 1, 1, 2, 4, 7, 13, 24, 44]
     actual: List[int] = list(islice(tribonacci(), len(expected)))
+    assert all([a == b for a, b in zip(actual, expected)])
+
+
+def test_unusual() -> None:
+    expected: List[int] = [2, 3, 5, 6, 7, 10, 11, 13, 14, 15, 17, 19, 20, 21, 22, 23]
+    actual: List[int] = list(islice(unusual(), len(expected)))
     assert all([a == b for a, b in zip(actual, expected)])
 
 

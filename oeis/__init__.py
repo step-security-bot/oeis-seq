@@ -92,6 +92,7 @@ from .superperfect import superperfect
 from .sylvester import sylvester
 from .totient import totient
 from .tribonacci import tribonacci
+from .unusual import unusual
 from .vauban import vauban
 from .weird import weird
 from .woodall import woodall
@@ -180,6 +181,7 @@ __all__ = [
     "triangular",
     "triangular_pyramidal",
     "tribonacci",
+    "unusual",
     "vauban",
     "weird",
     "woodall",
