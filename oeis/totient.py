@@ -1,4 +1,3 @@
-# coding=utf-8
 from itertools import count
 from typing import Iterable, List
 
@@ -11,6 +10,6 @@ from .utils import coprime
 def totient() -> Iterable[int]:
     """Euler totient function."""
     yield 1  # totient(0)
-    for n in count(start=2):
+    for n in count(start=2):  # pragma: no branch
         totients: List[bool] = [coprime(n, p) for p in range(1, n)]
         yield totients.count(True)

@@ -1,4 +1,3 @@
-# coding=utf-8
 """Create a thin wrapper around OEIS Registry."""
 from typing import Callable, Dict, Generic, Iterable, TypeVar
 

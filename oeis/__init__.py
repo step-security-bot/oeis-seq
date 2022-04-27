@@ -1,4 +1,3 @@
-# coding=utf-8
 """OEIS Sequences."""
 from .abundant import abundant
 from .arithmetic import arithmetic

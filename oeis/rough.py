@@ -1,4 +1,3 @@
-# coding=utf-8
 from itertools import count
 from typing import Iterable, List
 
@@ -18,7 +17,7 @@ def rough(k: int) -> Iterable[int]:
         raise ValueError("n must be a prime number.")
 
     yield 1
-    for n in count(start=2):
+    for n in count(start=2):  # pragma: no branch
         factors: List[int] = prime_factors(n)
         min_prime = min(factors)
         if min_prime >= k:

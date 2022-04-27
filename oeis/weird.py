@@ -1,4 +1,3 @@
-# coding=utf-8
 from itertools import count
 from typing import Iterable
 
@@ -9,6 +8,6 @@ from oeis.utils import is_abundant, is_semiperfect
 @registry.register("A006037")
 def weird() -> Iterable[int]:
     """Weird numbers."""
-    for n in count(start=1):
+    for n in count(start=1):  # pragma: no branch
         if is_abundant(n) and not is_semiperfect(n):
             yield n

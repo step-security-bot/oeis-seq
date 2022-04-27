@@ -1,4 +1,3 @@
-# coding=utf-8
 from typing import Dict, Iterable, List
 
 from oeis.registry import registry

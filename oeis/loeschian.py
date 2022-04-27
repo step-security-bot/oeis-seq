@@ -1,4 +1,3 @@
-# coding=utf-8
 from itertools import count
 from math import sqrt
 from typing import Iterable
@@ -23,6 +22,6 @@ def loeschian() -> Iterable[int]:
     yield 0
     yield 1
     yield 3
-    for i in count(start=4):
+    for i in count(start=4):  # pragma: no branch
         if is_loeschian(i):
             yield i

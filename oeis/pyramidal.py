@@ -1,4 +1,3 @@
-# coding=utf-8
 from itertools import count
 from typing import Iterable
 
@@ -13,7 +12,7 @@ def pyramidal(r: int) -> Iterable[int]:
             r: # of sides.
     """
     yield 0
-    for n in count(start=1):
+    for n in count(start=1):  # pragma: no branch
         yield (3 * pow(n, 2) + (pow(n, 3) * (r - 2)) - n * (r - 5)) // 6
 
 

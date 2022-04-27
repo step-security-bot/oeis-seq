@@ -1,4 +1,3 @@
-# coding=utf-8
 from itertools import count
 from typing import Iterable, List
 
@@ -18,7 +17,7 @@ def smooth(n: int) -> Iterable[int]:
         raise ValueError("n must be a prime number.")
 
     yield 1
-    for k in count(start=2):
+    for k in count(start=2):  # pragma: no branch
         factors: List[int] = prime_factors(k)
         max_prime = max(factors)
         if max_prime <= n:

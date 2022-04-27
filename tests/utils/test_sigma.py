@@ -1,4 +1,3 @@
-# coding=utf-8
 # flake8: noqa
 
 from oeis.utils import sigma

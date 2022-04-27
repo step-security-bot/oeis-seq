@@ -1,4 +1,3 @@
-# coding=utf-8
 from itertools import count
 from typing import Iterable
 
@@ -9,6 +8,6 @@ from oeis.utils import is_quasiperfect
 @registry.register("A088831")
 def quasiperfect() -> Iterable[int]:
     """Quasiperfect numbers."""
-    for n in count(start=1):
+    for n in count(start=1):  # pragma: no branch
         if is_quasiperfect(n):
             yield n

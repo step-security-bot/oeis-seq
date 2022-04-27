@@ -1,4 +1,3 @@
-# coding=utf-8
 """Various utility functions."""
 from functools import lru_cache
 from itertools import combinations
