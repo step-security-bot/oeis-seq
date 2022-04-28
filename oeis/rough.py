@@ -13,7 +13,7 @@ def rough(k: int) -> Iterable[int]:
     Args:
             k: prime integer.
     """
-    if not is_prime(k, 8):
+    if not is_prime(k):
         raise ValueError("n must be a prime number.")
 
     yield 1

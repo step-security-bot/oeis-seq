@@ -13,6 +13,7 @@ __all__ = [
     "is_deficient",
     "is_perfect",
     "is_prime",
+    "is_quasiperfect",
     "is_semiperfect",
     "is_superperfect",
     "prime_factors",
@@ -167,9 +168,9 @@ def prime_factors(n: int) -> List[int]:
     while n > 1:
         if n % i == 0:
             factors.append(i)
-            n = n // i
+            n //= i
         else:
-            i = i + 1
+            i += 1
 
     return factors
 
