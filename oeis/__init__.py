@@ -98,7 +98,7 @@ from .vauban import vauban
 from .weird import weird
 from .woodall import woodall
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 __all__ = [
     "abundant",
     "arithmetic",

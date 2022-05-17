@@ -47,7 +47,7 @@ license = "MIT"
 name = "oeis-seq"
 packages = [{ include = "oeis" }]
 repository = "https://github.com/reidhoch/oeis-seq"
-version = "0.1.7"
+version = "0.1.8"
 
 [tool.poetry.dependencies]
 python = "^3.8"
