@@ -33,6 +33,7 @@ from oeis import (
     heptagonal_pyramidal,
     hexagonal,
     hexagonal_pyramidal,
+    hilbert,
     icosahedral,
     jacobsthal,
     kynea,
@@ -77,6 +78,7 @@ from oeis import (
     smooth17,
     smooth19,
     smooth23,
+    sorting,
     square,
     square_pyramidal,
     superperfect,
@@ -612,4 +614,16 @@ def test_weird() -> None:
 def test_woodall() -> None:
     expected: List[int] = [1, 7, 23, 63, 159, 383, 895, 2047, 4607, 10239]
     actual: List[int] = list(islice(woodall(), len(expected)))
+    assert all([a == b for a, b in zip(actual, expected)])
+
+
+def test_hilbert() -> None:
+    expected: List[int] = [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41]
+    actual: List[int] = list(islice(hilbert(), len(expected)))
+    assert all([a == b for a, b in zip(actual, expected)])
+
+
+def test_sorting() -> None:
+    expected: List[int] = [0, 1, 3, 5, 8, 11, 14, 17, 21, 25, 29, 33, 37]
+    actual: List[int] = list(islice(sorting(), len(expected)))
     assert all([a == b for a, b in zip(actual, expected)])

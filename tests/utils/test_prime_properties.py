@@ -8,7 +8,7 @@ from hypothesis.strategies import integers
 from oeis.utils import divisors, is_prime
 
 
-@given(integers(min_value=2))
+@given(integers(min_value=2, max_value=1000000))
 def test_prime_property(n: int) -> None:
     if is_prime(n):
         d: List[int] = divisors(n)

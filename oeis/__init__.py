@@ -23,6 +23,7 @@ from .eratosthenes import eratosthenes
 from .factorial import factorial
 from .fermat import fermat
 from .fibonacci import fibonacci
+from .hilbert import hilbert
 from .icosahedral import icosahedral
 from .jacobsthal import jacobsthal
 from .kynea import kynea
@@ -87,6 +88,7 @@ from .smooth import (
     smooth19,
     smooth23,
 )
+from .sorting import sorting
 from .superperfect import superperfect
 from .sylvester import sylvester
 from .totient import totient
@@ -127,6 +129,7 @@ __all__ = [
     "heptagonal_pyramidal",
     "hexagonal",
     "hexagonal_pyramidal",
+    "hilbert",
     "icosahedral",
     "jacobsthal",
     "kynea",
@@ -172,6 +175,7 @@ __all__ = [
     "smooth17",
     "smooth19",
     "smooth23",
+    "sorting",
     "square",
     "sylvester",
     "square_pyramidal",
