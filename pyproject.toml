@@ -69,7 +69,7 @@ pytest = "^7.1"
 pytest-cov = "^3.0"
 pytest-profiling = "^1.7"
 pytest-xdist = {extras = ["psutil"], version = "^2.5"}
-shed = "^0.9"
+shed = "^0.10"
 tox = "^3.25"
 
 [build-system]
