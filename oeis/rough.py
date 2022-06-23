@@ -19,7 +19,7 @@ def rough(k: int) -> Iterable[int]:
     yield 1
     for n in count(start=2):  # pragma: no branch
         factors: List[int] = prime_factors(n)
-        min_prime = min(factors)
+        min_prime: int = min(factors)
         if min_prime >= k:
             yield n
 

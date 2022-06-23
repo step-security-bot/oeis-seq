@@ -5,7 +5,7 @@ from math import gcd, isqrt
 from random import randrange
 from typing import List, Set
 
-__all__ = [
+__all__: List[str] = [
     "aliquot_sum",
     "coprime",
     "divisors",
@@ -106,7 +106,7 @@ def is_prime(n: int, k: int = 8) -> bool:
         s += 1
 
     for _ in range(k):
-        a = randrange(2, n)
+        a: int = randrange(2, n)
         if _is_composite(a, d, n, s):
             return False
 

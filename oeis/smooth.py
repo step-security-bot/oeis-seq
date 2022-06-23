@@ -19,7 +19,7 @@ def smooth(n: int) -> Iterable[int]:
     yield 1
     for k in count(start=2):  # pragma: no branch
         factors: List[int] = prime_factors(k)
-        max_prime = max(factors)
+        max_prime: int = max(factors)
         if max_prime <= n:
             yield k
 
