@@ -265,7 +265,7 @@ python-versions = "*"
 
 [[package]]
 name = "hypothesis"
-version = "6.49.1"
+version = "6.50.1"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -805,7 +805,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "b6196b77eb49eb32ef73ab57a9c83f7863cea16ffe9a4ebc5d0348d8585d2797"
+content-hash = "f5f6a99873b5e0249c75b2bf30c5d5c13207543ee7b28befb2cd425303a6a031"
 
 [metadata.files]
 atomicwrites = []
