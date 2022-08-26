@@ -81,6 +81,7 @@ from oeis import (
     sorting,
     square,
     square_pyramidal,
+    squarefree,
     superperfect,
     sylvester,
     totient,
@@ -532,6 +533,12 @@ def test_smooth19() -> None:
 def test_smooth23() -> None:
     expected: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     actual: List[int] = list(islice(smooth23(), len(expected)))
+    assert all([a == b for a, b in zip(actual, expected)])
+
+
+def test_squarefree() -> None:
+    expected: List[int] = [1, 2, 3, 5, 6, 7, 10, 11, 13, 14, 15, 17, 19, 21, 22]
+    actual: List[int] = list(islice(squarefree(), len(expected)))
     assert all([a == b for a, b in zip(actual, expected)])
 
 

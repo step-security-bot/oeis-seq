@@ -91,6 +91,7 @@ from .smooth import (
     smooth23,
 )
 from .sorting import sorting
+from .squarefree import squarefree
 from .superperfect import superperfect
 from .sylvester import sylvester
 from .totient import totient
@@ -179,6 +180,7 @@ __all__: List[str] = [
     "smooth23",
     "sorting",
     "square",
+    "squarefree",
     "sylvester",
     "square_pyramidal",
     "superperfect",

@@ -13,8 +13,8 @@ def sorting() -> Iterable[int]:
         The maximal number of comparisons for sorting n elements by binary insertion.
     """
 
-    def S(n: int) -> int:
+    def s(n: int) -> int:
         return floor(1 + log2(n))
 
     for n in count(start=1):  # pragma: no branch
-        yield n * S(n) - pow(2, S(n)) + 1
+        yield n * s(n) - pow(2, s(n)) + 1
