@@ -102,7 +102,7 @@ from .vauban import vauban
 from .weird import weird
 from .woodall import woodall
 
-__version__: Literal["0.1.8"] = "0.1.8"
+__version__: Literal["0.1.9"] = "0.1.9"
 __all__: List[str] = [
     "abundant",
     "arithmetic",
