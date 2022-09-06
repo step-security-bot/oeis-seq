@@ -28,6 +28,7 @@ from .fibonacci import fibonacci
 from .hilbert import hilbert
 from .icosahedral import icosahedral
 from .jacobsthal import jacobsthal
+from .juggler import juggler
 from .kynea import kynea
 from .lazy_caterer import lazy_caterer
 from .leonardo import leonardo
@@ -135,6 +136,7 @@ __all__: List[str] = [
     "hilbert",
     "icosahedral",
     "jacobsthal",
+    "juggler",
     "kynea",
     "lazy_caterer",
     "leonardo",

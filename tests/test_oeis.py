@@ -36,6 +36,7 @@ from oeis import (
     hilbert,
     icosahedral,
     jacobsthal,
+    juggler,
     kynea,
     lazy_caterer,
     leonardo,
@@ -278,6 +279,12 @@ def test_icosahedral() -> None:
 def test_jacobsthal() -> None:
     expected: List[int] = [0, 1, 1, 3, 5, 11, 21, 43, 85, 171]
     actual: List[int] = list(islice(jacobsthal(), len(expected)))
+    assert all([a == b for a, b in zip(actual, expected)])
+
+
+def test_juggler() -> None:
+    expected: List[int] = [0, 1, 1, 5, 2, 11, 2, 18, 2, 27, 3, 36, 3, 46, 3, 58]
+    actual: List[int] = list(islice(juggler(), len(expected)))
     assert all([a == b for a, b in zip(actual, expected)])
 
 
