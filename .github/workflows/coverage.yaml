@@ -28,8 +28,12 @@ jobs:
       - name: Run tests with Poetry
         run: |
           poetry run pytest --junit-xml=junit/test-results-${{ matrix.python-version }}.xml --cov=oeis --cov-branch --cov-report=xml -n auto
-      - uses: 5monkeys/cobertura-action@v13
+      - uses: codecov/codecov-action@v3
         with:
-          path: coverage.xml
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          minimum_coverage: 75
+          files: coverage.xml
+          flags: unittests
+      # - uses: 5monkeys/cobertura-action@v13
+      #   with:
+      #     path: coverage.xml
+      #     repo_token: ${{ secrets.GITHUB_TOKEN }}
+      #     minimum_coverage: 75
