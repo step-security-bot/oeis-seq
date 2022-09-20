@@ -2,8 +2,13 @@ name: Pre-commit auto-update
 on:
   schedule:
     - cron: "4 5 * * *"
+permissions:
+  contents: read
 jobs:
   auto-update:
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
