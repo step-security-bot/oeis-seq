@@ -13,8 +13,8 @@ def loeschian() -> Iterable[int]:
         if n % 3 == 2:
             return False
         m: int = 2 * round(sqrt(n / 3))
-        for x in range(0, m + 1):
-            for y in range(0, x + 1):
+        for x in range(m + 1):
+            for y in range(x + 1):
                 if n == (x**2) + (x * y) + (y**2):
                     return True
         return False

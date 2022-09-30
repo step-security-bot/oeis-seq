@@ -48,10 +48,7 @@ def divisors(n: int) -> List[int]:
 def _is_composite(a: int, d: int, n: int, s: int) -> bool:
     if pow(a, d, n) == 1:
         return False
-    for i in range(s):
-        if pow(a, 2**i * d, n) == n - 1:
-            return False
-    return True
+    return all(pow(a, 2**i * d, n) != n - 1 for i in range(s))
 
 
 @lru_cache
@@ -95,9 +92,9 @@ def is_prime(n: int, k: int = 8) -> bool:
             n: Number to test.
             k: Optional number of rounds, default 8.
     """
-    if n in [0, 1, 4, 6, 8, 9]:
+    if n in (0, 1, 4, 6, 8, 9):
         return False
-    if n in [2, 3, 5, 7]:
+    if n in (2, 3, 5, 7):
         return True
     s: int = 0
     d: int = n - 1
@@ -122,9 +119,7 @@ def is_quasiperfect(n: int) -> bool:
             n: Number.
     """
     sig: int = sigma(n)
-    if sig - (2 * n) == 2:
-        return True
-    return False
+    return sig - (2 * n) == 2
 
 
 @lru_cache
