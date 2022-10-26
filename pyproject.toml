@@ -84,7 +84,7 @@ pytest-profiling = "^1.7"
 pytest-xdist = {extras = ["psutil"], version = "^3.0"}
 seaborn = "^0.12"
 shed = "^0.10"
-tox = "^3.26"
+tox = "^3.27"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
