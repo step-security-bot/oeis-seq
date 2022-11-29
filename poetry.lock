@@ -528,7 +528,7 @@ python-versions = "*"
 
 [[package]]
 name = "ipykernel"
-version = "6.18.1"
+version = "6.18.2"
 description = "IPython Kernel for Jupyter"
 category = "dev"
 optional = false
@@ -1750,8 +1750,8 @@ iniconfig = [
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 ipykernel = [
-    {file = "ipykernel-6.18.1-py3-none-any.whl", hash = "sha256:18c298565218e602939dd03b56206912433ebdb6b5800afd9177bbce8d96318b"},
-    {file = "ipykernel-6.18.1.tar.gz", hash = "sha256:71f21ce281da5a4e73ec4a7ecdf98802d9e65d58cdb7e22ff824ca994ce5114b"},
+    {file = "ipykernel-6.18.2-py3-none-any.whl", hash = "sha256:4ae64026a3cca0e1843d0fccce6690d7fda2b05267e4609547185797de999823"},
+    {file = "ipykernel-6.18.2.tar.gz", hash = "sha256:53714bb8b2207fda4a9fac645460c38612e04b63be34b4ba70febbebc8cfc4a0"},
 ]
 ipython = [
     {file = "ipython-8.6.0-py3-none-any.whl", hash = "sha256:91ef03016bcf72dd17190f863476e7c799c6126ec7e8be97719d1bc9a78a59a4"},
