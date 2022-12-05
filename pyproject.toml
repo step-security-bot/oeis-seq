@@ -81,7 +81,7 @@ pre-commit = "^2.20"
 pytest = "^7.2"
 pytest-cov = "^4.0"
 pytest-profiling = "^1.7"
-pytest-xdist = {extras = ["psutil"], version = "^3.0"}
+pytest-xdist = {extras = ["psutil"], version = "^3.1"}
 seaborn = "^0.12"
 shed = "^0.10"
 tox = "^3.27"
