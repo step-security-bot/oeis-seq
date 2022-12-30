@@ -1321,7 +1321,7 @@ python-versions = ">= 3.7"
 
 [[package]]
 name = "tox"
-version = "4.0.19"
+version = "4.1.1"
 description = "tox is a generic virtualenv management and test command line tool"
 category = "dev"
 optional = false
@@ -1403,7 +1403,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9a40b4733545b8fd0478eca1d7bd495cb344f96309b3ab2fc0d710f8b9b4cf51"
+content-hash = "c0a97e79c4cacc36be6a785810b7691287a8e862e3214cc36d2f91c8d856c5aa"
 
 [metadata.files]
 appnope = [
@@ -2456,8 +2456,8 @@ tornado = [
     {file = "tornado-6.2.tar.gz", hash = "sha256:9b630419bde84ec666bfd7ea0a4cb2a8a651c2d5cccdbdd1972a0c859dfc3c13"},
 ]
 tox = [
-    {file = "tox-4.0.19-py3-none-any.whl", hash = "sha256:2a51d4fd98a93b24819abbe9327fd759d39da73fb13aec3da954e8cd11f902ff"},
-    {file = "tox-4.0.19.tar.gz", hash = "sha256:31d95663dc66f8d53fdf0825f1fc931404b1db5380482c5449628f49db767047"},
+    {file = "tox-4.1.1-py3-none-any.whl", hash = "sha256:d6b9f9f77796fcb1260d46f12dd4d6ebcc16bb73e72f7a683421b365491a912e"},
+    {file = "tox-4.1.1.tar.gz", hash = "sha256:5d214ce3e480e3b2cce72dbc9e832296387e7311f76b70de4a649636d02e34c9"},
 ]
 traitlets = [
     {file = "traitlets-5.6.0-py3-none-any.whl", hash = "sha256:1410755385d778aed847d68deb99b3ba30fbbf489e17a1e8cbb753060d5cce73"},
