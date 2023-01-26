@@ -131,8 +131,8 @@ def is_semiperfect(n: int) -> bool:
             n: Number.
     """
     pd: List[int] = proper_divisors(n)
-    l: int = len(pd)
-    for i in range(l + 1):
+    length: int = len(pd)
+    for i in range(length + 1):
         for combo in combinations(pd, i):
             if sum(combo) == n:
                 return True
