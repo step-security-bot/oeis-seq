@@ -1215,24 +1215,24 @@ files = [
 
 [[package]]
 name = "ipykernel"
-version = "6.20.2"
+version = "6.21.0"
 description = "IPython Kernel for Jupyter"
 category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ipykernel-6.20.2-py3-none-any.whl", hash = "sha256:5d0675d5f48bf6a95fd517d7b70bcb3b2c5631b2069949b5c2d6e1d7477fb5a0"},
-    {file = "ipykernel-6.20.2.tar.gz", hash = "sha256:1893c5b847033cd7a58f6843b04a9349ffb1031bc6588401cadc9adb58da428e"},
+    {file = "ipykernel-6.21.0-py3-none-any.whl", hash = "sha256:a9aaefb0cd6f44e3dcaeaafb9222862ae73831f71afd77f465fc83d6199d1888"},
+    {file = "ipykernel-6.21.0.tar.gz", hash = "sha256:719eac0f1d86706589ee0910d6f785fd4c1ef123ab8e3466b8961c37991d0ef2"},
 ]
 
 [package.dependencies]
 appnope = {version = "*", markers = "platform_system == \"Darwin\""}
 comm = ">=0.1.1"
-debugpy = ">=1.0"
+debugpy = ">=1.6.5"
 ipython = ">=7.23.1"
 jupyter-client = ">=6.1.12"
+jupyter-core = ">=4.12,<5.0.0 || >=5.1.0"
 matplotlib-inline = ">=0.1"
-nest-asyncio = "*"
 packaging = "*"
 psutil = "*"
 pyzmq = ">=17"
@@ -1656,18 +1656,6 @@ python-versions = "*"
 files = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
-]
-
-[[package]]
-name = "nest-asyncio"
-version = "1.5.6"
-description = "Patch asyncio to allow nested event loops"
-category = "dev"
-optional = false
-python-versions = ">=3.5"
-files = [
-    {file = "nest_asyncio-1.5.6-py3-none-any.whl", hash = "sha256:b9a953fb40dceaa587d109609098db21900182b16440652454a146cffb06e8b8"},
-    {file = "nest_asyncio-1.5.6.tar.gz", hash = "sha256:d267cc1ff794403f7df692964d1d2a3fa9418ffea2a3f6859a439ff482fef290"},
 ]
 
 [[package]]
@@ -2809,4 +2797,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "0d93a8eecd3f5274c40768c61bf69c7a88f50119f2ea00bed1f6ca7a847adf3e"
+content-hash = "ef30f700b8f8d808bb6f4b76a0bad0bc5d8f298dbca5a8f981c804e39757b4f2"
