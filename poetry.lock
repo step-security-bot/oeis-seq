@@ -1246,14 +1246,14 @@ files = [
 
 [[package]]
 name = "ipykernel"
-version = "6.21.3"
+version = "6.22.0"
 description = "IPython Kernel for Jupyter"
 category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ipykernel-6.21.3-py3-none-any.whl", hash = "sha256:24ebd9715e317c185e37156ab3a87382410185230dde7aeffce389d6c7d4428a"},
-    {file = "ipykernel-6.21.3.tar.gz", hash = "sha256:c8ff581905d70e7299bc1473a2f7c113bec1744fb3746d58e5b4b93bd8ee7001"},
+    {file = "ipykernel-6.22.0-py3-none-any.whl", hash = "sha256:1ae6047c1277508933078163721bbb479c3e7292778a04b4bacf0874550977d6"},
+    {file = "ipykernel-6.22.0.tar.gz", hash = "sha256:302558b81f1bc22dc259fb2a0c5c7cf2f4c0bdb21b50484348f7bafe7fb71421"},
 ]
 
 [package.dependencies]
@@ -2839,4 +2839,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "56ea4152cfa74d80ef69f659c60704d9657f2db2b23914e1f16c7e869d382602"
+content-hash = "25a3935072a40f341d738d41342981f8465738a00e85595caa6fd3f932996bb9"
