@@ -97,7 +97,7 @@ pytest-profiling = "^1.7"
 pytest-xdist = {extras = ["psutil"], version = "^3.3"}
 ruff = "^0.0.275"
 seaborn = "^0.12"
-shed = "^2023.5"
+shed = "^2023.6"
 tox = "^4.6"
 
 [build-system]
