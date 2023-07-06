@@ -1,6 +1,6 @@
 [tool.black]
 line-length = 88
-target-version = ['py38']
+target-version = ['py39']
 include = '\.pyi?$'
 exclude = '''
 
@@ -26,7 +26,7 @@ exclude = '''
 profile = "black"
 
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.9"
 follow_imports = "silent"
 strict_optional = true
 strict_equality = true
@@ -50,7 +50,7 @@ repository = "https://github.com/reidhoch/oeis-seq"
 version = "0.1.9"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 black = "23.3.0"
