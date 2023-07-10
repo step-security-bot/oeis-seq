@@ -1,6 +1,6 @@
+from collections.abc import Iterable
 from itertools import count
 from math import floor, log2
-from typing import Iterable
 
 from oeis.registry import registry
 

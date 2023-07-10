@@ -3,9 +3,8 @@ from functools import lru_cache
 from itertools import combinations
 from math import gcd, isqrt
 from random import randrange
-from typing import List, Set
 
-__all__: List[str] = [
+__all__: list[str] = [
     "aliquot_sum",
     "coprime",
     "divisors",
@@ -35,9 +34,9 @@ def coprime(a: int, b: int) -> bool:
 
 
 @lru_cache
-def divisors(n: int) -> List[int]:
+def divisors(n: int) -> list[int]:
     """Return the divisors of n."""
-    ret: Set[int] = set()
+    ret: set[int] = set()
     for i in range(1, isqrt(n) + 1):
         if n % i == 0:
             ret.add(i)
@@ -130,7 +129,7 @@ def is_semiperfect(n: int) -> bool:
         Args:
             n: Number.
     """
-    pd: List[int] = proper_divisors(n)
+    pd: list[int] = proper_divisors(n)
     length: int = len(pd)
     for i in range(length + 1):
         for combo in combinations(pd, i):
@@ -151,14 +150,14 @@ def is_superperfect(n: int) -> bool:
 
 
 @lru_cache
-def prime_factors(n: int) -> List[int]:
+def prime_factors(n: int) -> list[int]:
     """
     Return prime factors of n.
 
         Args:
             n: Number.
     """
-    factors: List[int] = []
+    factors: list[int] = []
     i: int = 2
     while n > 1:
         if n % i == 0:
@@ -171,7 +170,7 @@ def prime_factors(n: int) -> List[int]:
 
 
 @lru_cache
-def proper_divisors(n: int) -> List[int]:
+def proper_divisors(n: int) -> list[int]:
     """Return the proper divisors of n."""
     return divisors(n)[:-1]
 

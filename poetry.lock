@@ -815,13 +815,13 @@ flake8 = "*"
 
 [[package]]
 name = "flake8-no-pep420"
-version = "2.6.0"
+version = "2.7.0"
 description = "A flake8 plugin to ban PEP-420 implicit namespace packages."
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "flake8_no_pep420-2.6.0-py3-none-any.whl", hash = "sha256:8174794e2ae79e8c76d520dfe5ab897c9830e908aa710731a069ab5fdbff24d9"},
-    {file = "flake8_no_pep420-2.6.0.tar.gz", hash = "sha256:e4b0b469e087e40ea0f53cabf4b23f085dff095ba2f0dfe3d4f011de2f05d461"},
+    {file = "flake8_no_pep420-2.7.0-py3-none-any.whl", hash = "sha256:018bbe0fba039444689d02a0857310b62b90ff9bf737aff27e0b847ec7eb9ba3"},
+    {file = "flake8_no_pep420-2.7.0.tar.gz", hash = "sha256:a1b6db4de355b87f8189714e68785a7c6a2d61d94f3e937b6cee336953f7d703"},
 ]
 
 [package.dependencies]
@@ -2803,4 +2803,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "fc077736eeccf9931ecf491f823aec2dd586c2e9b420643b4e3899c17f75bcdc"
+content-hash = "ba5c7ff910bffdad143df754093cc911c0a9b257a79d04c4a9e05e51d512df4b"
