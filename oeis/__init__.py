@@ -1,5 +1,5 @@
 """OEIS Sequences."""
-from typing import List, Literal
+from typing import Literal
 
 from .abundant import abundant
 from .arithmetic import arithmetic
@@ -103,7 +103,7 @@ from .weird import weird
 from .woodall import woodall
 
 __version__: Literal["0.1.9"] = "0.1.9"
-__all__: List[str] = [
+__all__: list[str] = [
     "abundant",
     "arithmetic",
     "buttered_croissant",

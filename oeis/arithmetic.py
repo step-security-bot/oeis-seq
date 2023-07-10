@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from itertools import count
-from typing import Iterable, List
 
 from oeis.registry import registry
 from oeis.utils import divisors, sigma
@@ -9,7 +9,7 @@ from oeis.utils import divisors, sigma
 def arithmetic() -> Iterable[int]:
     """Arithmetic numbers."""
     for n in count(start=1):  # pragma: no branch
-        div: List[int] = divisors(n)
+        div: list[int] = divisors(n)
         s: int = sigma(n)
         if not s % len(div):
             yield n

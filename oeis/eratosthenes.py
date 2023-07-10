@@ -1,4 +1,4 @@
-from typing import Dict, Iterable, List
+from collections.abc import Iterable
 
 from oeis.registry import registry
 
@@ -6,7 +6,7 @@ from oeis.registry import registry
 @registry.register("A000040")
 def eratosthenes() -> Iterable[int]:
     """Sieve of Eratosthenes."""
-    discards: Dict[int, List[int]] = {}
+    discards: dict[int, list[int]] = {}
     p: int = 2
 
     while True:

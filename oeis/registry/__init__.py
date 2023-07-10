@@ -1,5 +1,6 @@
 """Create a thin wrapper around OEIS Registry."""
-from typing import Callable, Dict, Generic, Iterable, TypeVar
+from collections.abc import Iterable
+from typing import Callable, Generic, TypeVar
 
 T = TypeVar("T", bound=Callable[[], Iterable[int]])
 
@@ -9,7 +10,7 @@ class OEISRegistry(Generic[T]):
 
     def __init__(self) -> None:
         """Initialize an OEISRegistry."""
-        self.sequences: Dict[str, T] = {}
+        self.sequences: dict[str, T] = {}
 
     def __getitem__(self, identifier: str) -> T:
         """Return the sequence generator."""

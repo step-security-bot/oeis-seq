@@ -1,6 +1,6 @@
+from collections.abc import Iterable
 from itertools import count
 from math import sqrt
-from typing import Iterable
 
 from oeis.registry import registry
 

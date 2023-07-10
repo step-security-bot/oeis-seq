@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from itertools import count
-from typing import Iterable, List
 
 from oeis.registry import registry
 
@@ -18,7 +18,7 @@ def smooth(n: int) -> Iterable[int]:
 
     yield 1
     for k in count(start=2):  # pragma: no branch
-        factors: List[int] = prime_factors(k)
+        factors: list[int] = prime_factors(k)
         max_prime: int = max(factors)
         if max_prime <= n:
             yield k

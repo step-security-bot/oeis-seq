@@ -1,5 +1,5 @@
+from collections.abc import Iterable
 from itertools import cycle
-from typing import Iterable
 
 from oeis.registry import registry
 
