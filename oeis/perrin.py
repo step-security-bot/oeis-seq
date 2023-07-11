@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A001608")
-def perrin() -> Iterable[int]:
+def perrin() -> "Iterable[int]":
     """Perrin sequence (or Ondrej Such sequence)."""
     yield 3  # perrin(0)
     yield 0  # perrin(1)

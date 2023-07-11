@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from .registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A000073")
-def tribonacci() -> Iterable[int]:
+def tribonacci() -> "Iterable[int]":
     """Tribonacci numbers."""
     yield 0
     yield 0

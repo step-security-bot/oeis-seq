@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A001045")
-def jacobsthal() -> Iterable[int]:
+def jacobsthal() -> "Iterable[int]":
     """Jacobsthal sequence (or Jacobsthal numbers)."""
     yield 0  # special case
     yield 1  # special case

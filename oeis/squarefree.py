@@ -1,12 +1,15 @@
-from collections.abc import Iterable
 from itertools import count
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 from oeis.utils import prime_factors
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A005117")
-def squarefree() -> Iterable[int]:
+def squarefree() -> "Iterable[int]":
     """
     Square-free numbers.
 

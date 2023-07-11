@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A000040")
-def eratosthenes() -> Iterable[int]:
+def eratosthenes() -> "Iterable[int]":
     """Sieve of Eratosthenes."""
     discards: dict[int, list[int]] = {}
     p: int = 2

@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A000129")
-def pell() -> Iterable[int]:
+def pell() -> "Iterable[int]":
     """Pell numbers."""
     yield 0  # pell(0)
     yield 1  # pell(1)

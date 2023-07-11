@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A000931")
-def padovan() -> Iterable[int]:
+def padovan() -> "Iterable[int]":
     """Padovan sequence (or Padovan numbers)."""
     yield 1  # padovan(0)
     yield 1  # padovan(1)

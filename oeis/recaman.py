@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A005132")
-def recaman() -> Iterable[int]:
+def recaman() -> "Iterable[int]":
     """Recamán's sequence."""
     yield 0  # recaman(0)
     seq: list[int] = [0]

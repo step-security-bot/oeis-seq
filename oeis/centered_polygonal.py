@@ -1,10 +1,13 @@
-from collections.abc import Iterable
 from itertools import count
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
 
-def centered_polygonal(k: int) -> Iterable[int]:
+
+def centered_polygonal(k: int) -> "Iterable[int]":
     """
     Centered polygonal numbers.
 
@@ -17,60 +20,60 @@ def centered_polygonal(k: int) -> Iterable[int]:
 
 
 @registry.register("A005448")
-def centered_triangular() -> Iterable[int]:
+def centered_triangular() -> "Iterable[int]":
     """Centered triangular numbers."""
     return centered_polygonal(3)
 
 
 @registry.register("A001844")
-def centered_square() -> Iterable[int]:
+def centered_square() -> "Iterable[int]":
     """Centered square numbers."""
     return centered_polygonal(4)
 
 
 @registry.register("A005891")
-def centered_pentagonal() -> Iterable[int]:
+def centered_pentagonal() -> "Iterable[int]":
     """Centered pentagonal numbers."""
     return centered_polygonal(5)
 
 
 @registry.register("A003215")
-def centered_hexagonal() -> Iterable[int]:
+def centered_hexagonal() -> "Iterable[int]":
     """Centered hexagonal numbers."""
     return centered_polygonal(6)
 
 
 @registry.register("A069099")
-def centered_heptagonal() -> Iterable[int]:
+def centered_heptagonal() -> "Iterable[int]":
     """Centered heptagonal numbers."""
     return centered_polygonal(7)
 
 
 @registry.register("A016754")
-def centered_octagonal() -> Iterable[int]:
+def centered_octagonal() -> "Iterable[int]":
     """Centered octagonal numbers."""
     return centered_polygonal(8)
 
 
 @registry.register("A060544")
-def centered_nonagonal() -> Iterable[int]:
+def centered_nonagonal() -> "Iterable[int]":
     """Centered nonagonal numbers."""
     return centered_polygonal(9)
 
 
 @registry.register("A062786")
-def centered_decagonal() -> Iterable[int]:
+def centered_decagonal() -> "Iterable[int]":
     """Centered decagonal numbers."""
     return centered_polygonal(10)
 
 
 @registry.register("A069125")
-def centered_hendecagonal() -> Iterable[int]:
+def centered_hendecagonal() -> "Iterable[int]":
     """Centered hendecagonal numbers."""
     return centered_polygonal(11)
 
 
 @registry.register("A003154")
-def centered_dodecagonal() -> Iterable[int]:
+def centered_dodecagonal() -> "Iterable[int]":
     """Centered dodecagonal numbers."""
     return centered_polygonal(12)

@@ -1,12 +1,15 @@
-from collections.abc import Iterable
 from itertools import count
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
 from .utils import is_prime, prime_factors
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
 
-def rough(k: int) -> Iterable[int]:
+
+def rough(k: int) -> "Iterable[int]":
     """
     k-rough numbers.
 
@@ -25,54 +28,54 @@ def rough(k: int) -> Iterable[int]:
 
 
 @registry.register("A000027")
-def rough2() -> Iterable[int]:
+def rough2() -> "Iterable[int]":
     """2-rough numbers."""
     return rough(2)
 
 
 @registry.register("A005408")
-def rough3() -> Iterable[int]:
+def rough3() -> "Iterable[int]":
     """3-rough numbers."""
     return rough(3)
 
 
 @registry.register("A007310")
-def rough5() -> Iterable[int]:
+def rough5() -> "Iterable[int]":
     """5-rough numbers."""
     return rough(5)
 
 
 @registry.register("A007775")
-def rough7() -> Iterable[int]:
+def rough7() -> "Iterable[int]":
     """7-rough numbers."""
     return rough(7)
 
 
 @registry.register("A008364")
-def rough11() -> Iterable[int]:
+def rough11() -> "Iterable[int]":
     """11-rough numbers."""
     return rough(11)
 
 
 @registry.register("A008365")
-def rough13() -> Iterable[int]:
+def rough13() -> "Iterable[int]":
     """13-rough numbers."""
     return rough(13)
 
 
 @registry.register("A008366")
-def rough17() -> Iterable[int]:
+def rough17() -> "Iterable[int]":
     """17-rough numbers."""
     return rough(17)
 
 
 @registry.register("A166061")
-def rough19() -> Iterable[int]:
+def rough19() -> "Iterable[int]":
     """19-rough numbers."""
     return rough(19)
 
 
 @registry.register("A166063")
-def rough23() -> Iterable[int]:
+def rough23() -> "Iterable[int]":
     """23-rough numbers."""
     return rough(23)

@@ -1,12 +1,15 @@
-from collections.abc import Iterable
 from itertools import count
 from math import sqrt
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A003136")
-def loeschian() -> Iterable[int]:
+def loeschian() -> "Iterable[int]":
     """Loeschian numbers."""
 
     def is_loeschian(n: int) -> bool:

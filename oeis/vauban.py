@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A224749")
-def vauban() -> Iterable[int]:
+def vauban() -> "Iterable[int]":
     """Vauban's sequence."""
     yield 0
     yield 1

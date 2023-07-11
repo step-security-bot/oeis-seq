@@ -1,10 +1,13 @@
-from collections.abc import Iterable
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register(identifier="A000045")
-def fibonacci() -> Iterable[int]:
+def fibonacci() -> "Iterable[int]":
     """Fibonacci numbers."""
     yield 0  # special case
     yield 1  # special case

@@ -1,10 +1,13 @@
-from collections.abc import Iterable
 from itertools import count
+from typing import TYPE_CHECKING
 
 from .registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
 
-def pyramidal(r: int) -> Iterable[int]:
+
+def pyramidal(r: int) -> "Iterable[int]":
     """
     Pyramidal numbers.
 
@@ -17,36 +20,36 @@ def pyramidal(r: int) -> Iterable[int]:
 
 
 @registry.register("A000292")
-def triangular_pyramidal() -> Iterable[int]:
+def triangular_pyramidal() -> "Iterable[int]":
     """Triangular pyramidal numbers."""
     return pyramidal(3)
 
 
 @registry.register("A000330")
-def square_pyramidal() -> Iterable[int]:
+def square_pyramidal() -> "Iterable[int]":
     """Square pyramidal numbers."""
     return pyramidal(4)
 
 
 @registry.register("A002411")
-def pentagonal_pyramidal() -> Iterable[int]:
+def pentagonal_pyramidal() -> "Iterable[int]":
     """Pentagonal pyramidal numbers."""
     return pyramidal(5)
 
 
 @registry.register("A002412")
-def hexagonal_pyramidal() -> Iterable[int]:
+def hexagonal_pyramidal() -> "Iterable[int]":
     """Hexagonal pyramidal numbers."""
     return pyramidal(6)
 
 
 @registry.register("A002413")
-def heptagonal_pyramidal() -> Iterable[int]:
+def heptagonal_pyramidal() -> "Iterable[int]":
     """Heptagonal pyramidal numbers."""
     return pyramidal(7)
 
 
 @registry.register("A002414")
-def octagonal_pyramidal() -> Iterable[int]:
+def octagonal_pyramidal() -> "Iterable[int]":
     """Octagonal pyramidal numbers."""
     return pyramidal(8)

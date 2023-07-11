@@ -13,7 +13,7 @@ def test_register() -> None:
     ]()
 
     @registry.register(identifier="A000012")
-    def one() -> Iterable[int]:
+    def one() -> "Iterable[int]":
         yield 1
 
     expected = one
@@ -27,11 +27,11 @@ def test_duplicate_entries_throw_KeyError() -> None:
     ]()
 
     @registry.register(identifier="A000012")
-    def one() -> Iterable[int]:
+    def one() -> "Iterable[int]":
         yield 1
 
     with pytest.raises(KeyError):
 
         @registry.register(identifier="A000012")
-        def two() -> Iterable[int]:
+        def two() -> "Iterable[int]":
             yield 1

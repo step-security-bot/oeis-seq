@@ -1,12 +1,15 @@
-from collections.abc import Iterable
 from itertools import count
 from math import floor, log2
+from typing import TYPE_CHECKING
 
 from oeis.registry import registry
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+
 
 @registry.register("A001855")
-def sorting() -> Iterable[int]:
+def sorting() -> "Iterable[int]":
     """
     Sorting numbers.
 
