@@ -54,7 +54,7 @@ python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 black = "23.7.0"
-flake8 = "^6.0"
+flake8 = "^6.1"
 flake8-2020 = "^1.8.1"
 flake8-bandit = "^4.1.1"
 flake8-blind-except = "^0.2.1"
